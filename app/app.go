@@ -81,7 +81,7 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m AppModel) View() string {
 	var s string
 	if m.Quitting {
-		return "\n  " + TitleStyle("See you later!") + "\n\n"
+		return "\n  " + TitleStyle("See you later! 👋") + "\n\n"
 
 	}
 	switch m.ActiveView {

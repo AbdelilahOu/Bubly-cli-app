@@ -20,7 +20,7 @@ var ScrapingOptions = []ViewsOptions{
 func ScrapingView(m AppModel) string {
 	c := m.Choice
 
-	tpl := TitleStyle("What web scraping tools do you wanna use?") + "\n\n%s"
+	tpl := TitleStyle("What web scraping tools do you wanna use? 🔨") + "\n\n%s"
 
 	choices := fmt.Sprintf(
 		"%s\n%s\n",
