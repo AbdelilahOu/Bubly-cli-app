@@ -18,8 +18,6 @@ var (
 	highlight = lipgloss.AdaptiveColor{Light: "#874BFD", Dark: "#7D56F4"}
 )
 
-// more styles
-
 var (
 	TitleStyle = lipgloss.NewStyle().
 		Align(lipgloss.Left).
@@ -29,11 +27,27 @@ var (
 		Padding(0, 2).Render
 )
 
+type ViewsOptions struct {
+	View        string
+	ChoiceLabel string
+}
+
 type AppModel struct {
 	Choice     int
 	Quitting   bool
 	History    []string
 	ActiveView string
+}
+
+var MainOptions = []ViewsOptions{
+	{
+		View:        "youtube",
+		ChoiceLabel: "Youtube tools 📺",
+	},
+	{
+		View:        "scraping",
+		ChoiceLabel: "Web scraping tools 🕸️",
+	},
 }
 
 func (m AppModel) Init() tea.Cmd {
@@ -80,12 +94,11 @@ func (m AppModel) View() string {
 
 // Update loop for the first view where you're choosing a task.
 func UpdateMain(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
-	MainChoices := []string{"youtube", "scraping"}
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "j", "down":
-			if len(MainChoices) > m.Choice+1 {
+			if len(MainOptions) > m.Choice+1 {
 				m.Choice++
 			}
 		case "k", "up":
@@ -93,7 +106,7 @@ func UpdateMain(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 				m.Choice--
 			}
 		case "enter":
-			m = appendToHistory(m, MainChoices[m.Choice])
+			m = appendToHistory(m, MainOptions[m.Choice].View)
 			return m, nil
 		}
 
@@ -104,11 +117,11 @@ func UpdateMain(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 // The first view, where you're choosing a task
 func MainView(m AppModel) string {
 	c := m.Choice
-	tpl := TitleStyle("What tools do you wanna use?") + "\n\n%s"
+	tpl := TitleStyle("What tools do you wanna use? 🔨") + "\n\n%s"
 	choices := fmt.Sprintf(
 		"%s\n%s\n",
-		checkbox("Youtube tools", c == 0),
-		checkbox("Web scraping", c == 1),
+		checkbox(MainOptions[0].ChoiceLabel, c == 0),
+		checkbox(MainOptions[1].ChoiceLabel, c == 1),
 	)
 
 	return fmt.Sprintf(tpl, choices)
