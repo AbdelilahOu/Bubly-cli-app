@@ -9,22 +9,22 @@ import (
 var YoutubeOptions = []ViewsOptions{
 	{
 		View:        "translate",
-		ChoiceLabel: "Youtube vedio translator",
+		ChoiceLabel: "Youtube vedio translator 📝",
 	},
 	{
 		View:        "download",
-		ChoiceLabel: "Youtube vedio downloader",
+		ChoiceLabel: "Youtube vedio downloader 📥",
 	},
 	{
 		View:        "infos",
-		ChoiceLabel: "Youtube vedio infos",
+		ChoiceLabel: "Youtube vedio infos 📎",
 	},
 }
 
 func YoutubeView(m AppModel) string {
 	c := m.Choice
 
-	tpl := TitleStyle("What youtube tools do you wanna use? 🔨") + "\n\n%s"
+	tpl := TitleStyle("What youtube tools do you wanna use? �️") + "\n\n%s"
 
 	choices := fmt.Sprintf(
 		"%s\n%s\n%s\n",

@@ -8,12 +8,12 @@ import (
 
 var ScrapingOptions = []ViewsOptions{
 	{
-		View:        "images",
-		ChoiceLabel: "Download images from web site",
+		View:        "web-images",
+		ChoiceLabel: "Download images from web site 🖼️",
 	},
 	{
-		View:        "pdf",
-		ChoiceLabel: "Print a website",
+		View:        "web-pdf",
+		ChoiceLabel: "Print a website 📄",
 	},
 }
 
