@@ -34,10 +34,9 @@ type ViewsOptions struct {
 }
 
 type AppModel struct {
-	Choice     int
-	Quitting   bool
-	History    []string
-	ActiveView string
+	Choice   int
+	Quitting bool
+	History  []string
 }
 
 var MainOptions = []ViewsOptions{
