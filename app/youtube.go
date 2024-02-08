@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+	"strings"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -45,10 +46,10 @@ func UpdateYoutube(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 func YoutubeView(m AppModel) string {
 	c := m.Choice
 
-	tpl := TitleStyle("What youtube tools do you wanna use? �️") + "\n\n%s"
+	tpl := TitleStyle("What youtube tools do you wanna use? 🔨") + "\n\n%s"
 
 	choices := fmt.Sprintf(
-		"%s\n%s\n%s\n",
+		strings.Repeat("%s\n", len(YoutubeOptions)),
 		checkbox(YoutubeOptions[0].ChoiceLabel, c == 0),
 		checkbox(YoutubeOptions[1].ChoiceLabel, c == 1),
 		checkbox(YoutubeOptions[2].ChoiceLabel, c == 2),

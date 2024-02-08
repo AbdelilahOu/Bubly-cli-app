@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+	"strings"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -44,7 +45,7 @@ func ScrapingView(m AppModel) string {
 	tpl := TitleStyle("What web scraping tools do you wanna use? 🔨") + "\n\n%s"
 
 	choices := fmt.Sprintf(
-		"%s\n%s\n",
+		strings.Repeat("%s\n", len(ScrapingOptions)),
 		checkbox(ScrapingOptions[0].ChoiceLabel, c == 0),
 		checkbox(ScrapingOptions[1].ChoiceLabel, c == 1),
 	)
