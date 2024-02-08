@@ -46,8 +46,7 @@ func ScrapingView(m AppModel) string {
 
 	choices := fmt.Sprintf(
 		strings.Repeat("%s\n", len(ScrapingOptions)),
-		checkbox(ScrapingOptions[0].ChoiceLabel, c == 0),
-		checkbox(ScrapingOptions[1].ChoiceLabel, c == 1),
+		destructureOptions(ScrapingOptions, c)...,
 	)
 
 	return fmt.Sprintf(tpl, choices)
