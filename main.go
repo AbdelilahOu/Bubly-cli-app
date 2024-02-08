@@ -10,10 +10,9 @@ import (
 
 func main() {
 	initialModel := app.AppModel{
-		Choice:     0,
-		Quitting:   false,
-		History:    []string{"main"},
-		ActiveView: "main",
+		Choice:   0,
+		Quitting: false,
+		History:  []string{"main"},
 	}
 	p := tea.NewProgram(initialModel)
 	if _, err := p.Run(); err != nil {
