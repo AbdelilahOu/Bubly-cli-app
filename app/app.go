@@ -69,13 +69,20 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 	}
 
-	switch m.ActiveView {
+	// we could have done this better
+	// but in order to let the second view take care of rendering sub views
+	// we need to keep track of the active view this way
+	if len(m.History) <= 1 {
+		return UpdateMain(msg, m)
+	}
+	switch m.History[1] {
 	case "youtube":
 		return UpdateYoutube(msg, m)
 	case "scraping":
 		return UpdateScraping(msg, m)
+	default:
+		return UpdateMain(msg, m)
 	}
-	return UpdateMain(msg, m)
 }
 
 // The main view, which just calls the appropriate sub-view
@@ -85,7 +92,12 @@ func (m AppModel) View() string {
 		return "\n  " + TitleStyle("See you later! 👋") + "\n\n"
 
 	}
-	switch m.ActiveView {
+
+	if len(m.History) <= 1 {
+		s = MainView(m)
+		return indent.String("\n"+s+"\n\n"+help, 2)
+	}
+	switch m.History[1] {
 	case "youtube":
 		s = YoutubeView(m)
 	case "scraping":
@@ -149,12 +161,10 @@ func checkbox(label string, checked bool) string {
 // Utils
 func appendToHistory(m AppModel, s string) AppModel {
 	m.History = append(m.History, s)
-	m.ActiveView = s
 	return m
 }
 func removeFromHistory(m AppModel) AppModel {
 	m.History = m.History[:len(m.History)-1]
-	m.ActiveView = m.History[len(m.History)-1]
 	m.Choice = 0
 	return m
 }
