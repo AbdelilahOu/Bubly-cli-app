@@ -8,32 +8,17 @@ import (
 
 var YoutubeOptions = []ViewsOptions{
 	{
-		View:        "translate",
+		View:        "yt-translate",
 		ChoiceLabel: "Youtube vedio translator 📝",
 	},
 	{
-		View:        "download",
+		View:        "yt-download",
 		ChoiceLabel: "Youtube vedio downloader 📥",
 	},
 	{
-		View:        "infos",
+		View:        "yt-infos",
 		ChoiceLabel: "Youtube vedio infos 📎",
 	},
-}
-
-func YoutubeView(m AppModel) string {
-	c := m.Choice
-
-	tpl := TitleStyle("What youtube tools do you wanna use? �️") + "\n\n%s"
-
-	choices := fmt.Sprintf(
-		"%s\n%s\n%s\n",
-		checkbox(YoutubeOptions[0].ChoiceLabel, c == 0),
-		checkbox(YoutubeOptions[1].ChoiceLabel, c == 1),
-		checkbox(YoutubeOptions[2].ChoiceLabel, c == 2),
-	)
-
-	return fmt.Sprintf(tpl, choices)
 }
 
 func UpdateYoutube(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
@@ -55,4 +40,19 @@ func UpdateYoutube(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 
 	}
 	return m, nil
+}
+
+func YoutubeView(m AppModel) string {
+	c := m.Choice
+
+	tpl := TitleStyle("What youtube tools do you wanna use? �️") + "\n\n%s"
+
+	choices := fmt.Sprintf(
+		"%s\n%s\n%s\n",
+		checkbox(YoutubeOptions[0].ChoiceLabel, c == 0),
+		checkbox(YoutubeOptions[1].ChoiceLabel, c == 1),
+		checkbox(YoutubeOptions[2].ChoiceLabel, c == 2),
+	)
+
+	return fmt.Sprintf(tpl, choices)
 }
