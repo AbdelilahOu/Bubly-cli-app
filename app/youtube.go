@@ -50,9 +50,7 @@ func YoutubeView(m AppModel) string {
 
 	choices := fmt.Sprintf(
 		strings.Repeat("%s\n", len(YoutubeOptions)),
-		checkbox(YoutubeOptions[0].ChoiceLabel, c == 0),
-		checkbox(YoutubeOptions[1].ChoiceLabel, c == 1),
-		checkbox(YoutubeOptions[2].ChoiceLabel, c == 2),
+		destructureOptions(YoutubeOptions, c)...,
 	)
 
 	return fmt.Sprintf(tpl, choices)

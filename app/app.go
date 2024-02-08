@@ -125,11 +125,18 @@ func MainView(m AppModel) string {
 	tpl := TitleStyle("What tools do you wanna use? 🔨") + "\n\n%s"
 	choices := fmt.Sprintf(
 		strings.Repeat("%s\n", len(MainOptions)),
-		checkbox(MainOptions[0].ChoiceLabel, c == 0),
-		checkbox(MainOptions[1].ChoiceLabel, c == 1),
+		destructureOptions(MainOptions, c)...,
 	)
 
 	return fmt.Sprintf(tpl, choices)
+}
+
+func destructureOptions(options []ViewsOptions, c int) []any {
+	var choices []any
+	for i, option := range options {
+		choices = append(choices, checkbox(option.ChoiceLabel, c == i))
+	}
+	return choices
 }
 
 func checkbox(label string, checked bool) string {
