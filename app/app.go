@@ -71,6 +71,8 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch m.ActiveView {
 	case "youtube":
 		return UpdateYoutube(msg, m)
+	case "scraping":
+		return UpdateScraping(msg, m)
 	}
 	return UpdateMain(msg, m)
 }
@@ -85,6 +87,8 @@ func (m AppModel) View() string {
 	switch m.ActiveView {
 	case "youtube":
 		s = YoutubeView(m)
+	case "scraping":
+		s = ScrapingView(m)
 	default:
 		s = MainView(m)
 	}
