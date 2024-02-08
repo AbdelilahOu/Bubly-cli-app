@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+	"strings"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -123,7 +124,7 @@ func MainView(m AppModel) string {
 	c := m.Choice
 	tpl := TitleStyle("What tools do you wanna use? 🔨") + "\n\n%s"
 	choices := fmt.Sprintf(
-		"%s\n%s\n",
+		strings.Repeat("%s\n", len(MainOptions)),
 		checkbox(MainOptions[0].ChoiceLabel, c == 0),
 		checkbox(MainOptions[1].ChoiceLabel, c == 1),
 	)
