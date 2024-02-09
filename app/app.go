@@ -43,6 +43,7 @@ type AppModel struct {
 	Viewport         viewport.Model
 	Text             string
 	IsTextAreaActive bool
+	IsUrlWritten     bool
 }
 
 var MainOptions = []ViewsOptions{
@@ -78,8 +79,10 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 		if k == "backspace" && len(m.History) > 1 {
 			if m.Textarea.Value() == "" {
+				m.IsUrlWritten = false
 				m = removeFromHistory(m)
 			} else {
+				m.Text = ""
 				m.Text = m.Textarea.Value()[:len(m.Textarea.Value())-1]
 			}
 		}

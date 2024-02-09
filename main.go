@@ -41,6 +41,7 @@ func main() {
 		Viewport:         vp,
 		Text:             "",
 		IsTextAreaActive: false,
+		IsUrlWritten:     false,
 	}
 	p := tea.NewProgram(initialModel)
 	if _, err := p.Run(); err != nil {
