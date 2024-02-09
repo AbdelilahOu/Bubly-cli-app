@@ -7,16 +7,19 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
-var ScrapingOptions = []ViewsOptions{
-	{
-		View:        "web-images",
-		ChoiceLabel: "Download images from web site 🖼️",
-	},
-	{
-		View:        "web-pdf",
-		ChoiceLabel: "Print a website 📄",
-	},
-}
+var (
+	ScrapingOptions = []ViewsOptions{
+		{
+			View:        "web-images",
+			ChoiceLabel: "Download images from web site 🖼️",
+		},
+		{
+			View:        "web-pdf",
+			ChoiceLabel: "Print a website 📄",
+		},
+	}
+	IsUrlWritten = false
+)
 
 func UpdateScraping(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 	if len(m.History) > 2 {
@@ -40,6 +43,9 @@ func UpdateScraping(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 				m.Choice--
 			}
 		case "enter":
+			if ScrapingOptions[m.Choice].View == "web-pdf" {
+				m.IsTextAreaActive = true
+			}
 			m.History = append(m.History, ScrapingOptions[m.Choice].View)
 			return m, nil
 		}
@@ -73,22 +79,32 @@ func ScrapingView(m AppModel) string {
 
 // pdf printer view and update funcs
 func PrintWebsiteView(m AppModel) string {
-	tpl := TitleStyle("Print a website 📄") + "\n\n"
 
-	return tpl
+	tpl := TitleStyle("Print a website 📄") + "\n\n%s"
+	if IsUrlWritten {
+		return fmt.Sprintf(tpl, "Printing : "+m.Text)
+	}
+
+	return fmt.Sprintf(tpl, m.Textarea.View())
 }
 
 func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
+	var (
+		tiCmd tea.Cmd
+	)
+	m.Textarea, tiCmd = m.Textarea.Update(msg)
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
-		switch msg.String() {
-		case "enter":
-			// m.History = append(m.History, ScrapingChoices[m.Choice])
+		switch msg.Type {
+		case tea.KeyEnter:
+			m.Text = m.Textarea.Value()
+			m.Textarea.Reset()
+			IsUrlWritten = true
+			m.IsTextAreaActive = false
 			return m, nil
 		}
-
 	}
-	return m, nil
+	return m, tea.Batch(tiCmd)
 }
 
 // website images downloader view and update functions

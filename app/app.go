@@ -36,11 +36,13 @@ type ViewsOptions struct {
 }
 
 type AppModel struct {
-	Choice   int
-	Quitting bool
-	History  []string
-	Textarea textarea.Model
-	Viewport viewport.Model
+	Choice           int
+	Quitting         bool
+	History          []string
+	Textarea         textarea.Model
+	Viewport         viewport.Model
+	Text             string
+	IsTextAreaActive bool
 }
 
 var MainOptions = []ViewsOptions{
@@ -63,12 +65,23 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	// Make sure these keys always quit
 	if msg, ok := msg.(tea.KeyMsg); ok {
 		k := msg.String()
-		if k == "q" || k == "esc" || k == "ctrl+c" {
-			m.Quitting = true
-			return m, tea.Quit
+		if m.IsTextAreaActive {
+			if k == "esc" || k == "ctrl+c" {
+				m.Quitting = true
+				return m, tea.Quit
+			}
+		} else {
+			if k == "q" || k == "esc" || k == "ctrl+c" {
+				m.Quitting = true
+				return m, tea.Quit
+			}
 		}
 		if k == "backspace" && len(m.History) > 1 {
-			m = removeFromHistory(m)
+			if m.Textarea.Value() == "" {
+				m = removeFromHistory(m)
+			} else {
+				m.Text = m.Textarea.Value()[:len(m.Textarea.Value())-1]
+			}
 		}
 	}
 

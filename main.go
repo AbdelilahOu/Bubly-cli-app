@@ -19,8 +19,8 @@ func main() {
 	ta.Prompt = "┃ "
 	ta.CharLimit = 280
 
-	ta.SetWidth(30)
-	ta.SetHeight(3)
+	ta.SetWidth(50)
+	ta.SetHeight(2)
 
 	// Remove cursor line styling
 	ta.FocusedStyle.CursorLine = lipgloss.NewStyle()
@@ -34,11 +34,13 @@ func main() {
 	ta.KeyMap.InsertNewline.SetEnabled(false)
 
 	initialModel := app.AppModel{
-		Choice:   0,
-		Quitting: false,
-		History:  []string{"main"},
-		Textarea: ta,
-		Viewport: vp,
+		Choice:           0,
+		Quitting:         false,
+		History:          []string{"main"},
+		Textarea:         ta,
+		Viewport:         vp,
+		Text:             "",
+		IsTextAreaActive: false,
 	}
 	p := tea.NewProgram(initialModel)
 	if _, err := p.Run(); err != nil {
