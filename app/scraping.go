@@ -18,7 +18,6 @@ var (
 			ChoiceLabel: "Print a website 📄",
 		},
 	}
-	IsUrlWritten = false
 )
 
 func UpdateScraping(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
@@ -81,10 +80,9 @@ func ScrapingView(m AppModel) string {
 func PrintWebsiteView(m AppModel) string {
 
 	tpl := TitleStyle("Print a website 📄") + "\n\n%s"
-	if IsUrlWritten {
+	if m.IsUrlWritten {
 		return fmt.Sprintf(tpl, "Printing : "+m.Text)
 	}
-
 	return fmt.Sprintf(tpl, m.Textarea.View())
 }
 
@@ -97,10 +95,13 @@ func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		switch msg.Type {
 		case tea.KeyEnter:
-			m.Text = m.Textarea.Value()
-			m.Textarea.Reset()
-			IsUrlWritten = true
-			m.IsTextAreaActive = false
+			if !m.IsUrlWritten {
+				m.Text = m.Textarea.Value()
+				m.Textarea.Reset()
+				m.IsUrlWritten = true
+				m.IsTextAreaActive = false
+				return m, nil
+			}
 			return m, nil
 		}
 	}
