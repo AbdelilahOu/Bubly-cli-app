@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/charmbracelet/bubbles/textarea"
+	"github.com/charmbracelet/bubbles/viewport"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/muesli/reflow/indent"
@@ -37,6 +39,8 @@ type AppModel struct {
 	Choice   int
 	Quitting bool
 	History  []string
+	Textarea textarea.Model
+	Viewport viewport.Model
 }
 
 var MainOptions = []ViewsOptions{
