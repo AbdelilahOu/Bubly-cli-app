@@ -122,7 +122,6 @@ func UpdateWebsiteImages(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 			// m.History = append(m.History, ScrapingChoices[m.Choice])
 			return m, nil
 		}
-
 	}
 	return m, nil
 }
