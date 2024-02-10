@@ -5,7 +5,6 @@ import (
 	"strings"
 
 	"github.com/charmbracelet/bubbles/textarea"
-	"github.com/charmbracelet/bubbles/viewport"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/muesli/reflow/indent"
@@ -23,11 +22,23 @@ var (
 
 var (
 	TitleStyle = lipgloss.NewStyle().
-		Align(lipgloss.Left).
-		Foreground(lipgloss.Color("#FAFAFA")).
-		Background(highlight).
-		Margin(1, 1, 0, 0).
-		Padding(0, 2).Render
+			Align(lipgloss.Left).
+			Foreground(lipgloss.Color("#FAFAFA")).
+			Background(highlight).
+			Margin(1, 1, 0, 0).
+			Padding(0, 2).Render
+	SuccessStyle = lipgloss.NewStyle().
+			Align(lipgloss.Left).
+			Foreground(lipgloss.Color("#FAFAFA")).
+			Background(lipgloss.AdaptiveColor{Light: "#16a34a", Dark: "#16a34a"}).
+			Margin(1, 1, 0, 0).
+			Padding(0, 2).Render
+	ErrorStyle = lipgloss.NewStyle().
+			Align(lipgloss.Left).
+			Foreground(lipgloss.Color("#FAFAFA")).
+			Background(lipgloss.AdaptiveColor{Light: "#b91c1c", Dark: "#b91c1c"}).
+			Margin(1, 1, 0, 0).
+			Padding(0, 2).Render
 )
 
 type ViewsOptions struct {
@@ -40,10 +51,11 @@ type AppModel struct {
 	Quitting         bool
 	History          []string
 	Textarea         textarea.Model
-	Viewport         viewport.Model
 	Text             string
 	IsTextAreaActive bool
 	IsUrlWritten     bool
+	PrintingIsDone   bool
+	PrintingError    bool
 }
 
 var MainOptions = []ViewsOptions{
@@ -80,9 +92,10 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if k == "backspace" && len(m.History) > 1 {
 			if m.Textarea.Value() == "" {
 				m.IsUrlWritten = false
+				m.PrintingError = false
+				m.PrintingIsDone = false
 				m = removeFromHistory(m)
 			} else {
-				m.Text = ""
 				m.Text = m.Textarea.Value()[:len(m.Textarea.Value())-1]
 			}
 		}
@@ -114,7 +127,7 @@ func (m AppModel) View() string {
 
 	if len(m.History) <= 1 {
 		s = MainView(m)
-		return indent.String("\n"+s+"\n\n"+help, 2)
+		return indent.String("\n"+s+"\n"+help, 2)
 	}
 	switch m.History[1] {
 	case "youtube":
@@ -125,7 +138,7 @@ func (m AppModel) View() string {
 		s = MainView(m)
 	}
 
-	return indent.String("\n"+s+"\n\n"+help, 2)
+	return indent.String("\n"+s+"\n"+help, 2)
 }
 
 // Update loop for the first view where you're choosing a task.
