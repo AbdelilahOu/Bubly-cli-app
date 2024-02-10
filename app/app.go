@@ -121,24 +121,24 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m AppModel) View() string {
 	var s string
 	if m.Quitting {
-		return "\n  " + TitleStyle("See you later! 👋") + "\n\n"
+		return "\n  " + TitleStyle("See you later! 👋") + "\n"
 
 	}
 
 	if len(m.History) <= 1 {
 		s = MainView(m)
-		return indent.String("\n"+s+"\n"+help, 2)
-	}
-	switch m.History[1] {
-	case "youtube":
-		s = YoutubeView(m)
-	case "scraping":
-		s = ScrapingView(m)
-	default:
-		s = MainView(m)
+	} else {
+		switch m.History[1] {
+		case "youtube":
+			s = YoutubeView(m)
+		case "scraping":
+			s = ScrapingView(m)
+		default:
+			s = MainView(m)
+		}
 	}
 
-	return indent.String("\n"+s+"\n"+help, 2)
+	return indent.String("\n"+s+"\n\n"+help, 2)
 }
 
 // Update loop for the first view where you're choosing a task.
