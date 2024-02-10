@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/AbdelilahOu/Bubly-cli-app/types"
+	"github.com/AbdelilahOu/Bubly-cli-app/utils"
 	tea "github.com/charmbracelet/bubbletea"
 )
 
@@ -78,12 +80,17 @@ func ScrapingView(m AppModel) string {
 
 // pdf printer view and update funcs
 func PrintWebsiteView(m AppModel) string {
-
 	tpl := TitleStyle("Print a website 📄") + "\n\n%s"
 	if m.IsUrlWritten {
+		if m.PrintingError {
+			return fmt.Sprintf(tpl, ErrorStyle("An error accured while printing page"))
+		}
+		if m.PrintingIsDone {
+			return fmt.Sprintf(tpl, SuccessStyle("Printing done check assets folder"))
+		}
 		return fmt.Sprintf(tpl, "Printing : "+m.Text)
 	}
-	return fmt.Sprintf(tpl, m.Textarea.View())
+	return fmt.Sprintf(tpl, m.Textarea.View()+"\n")
 }
 
 func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
@@ -100,9 +107,16 @@ func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 				m.Textarea.Reset()
 				m.IsUrlWritten = true
 				m.IsTextAreaActive = false
-				return m, nil
+				return m, tea.Batch(utils.GetPageAsPdf(m.Text))
 			}
 			return m, nil
+		}
+	case types.StatusMsg:
+		switch msg {
+		case "error":
+			m.PrintingError = true
+		case "done":
+			m.PrintingIsDone = true
 		}
 	}
 	return m, tea.Batch(tiCmd)
@@ -111,7 +125,6 @@ func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 // website images downloader view and update functions
 func WebsiteImagesView(m AppModel) string {
 	tpl := TitleStyle("Download images from web site 🖼️") + "\n\n"
-
 	return tpl
 }
 
