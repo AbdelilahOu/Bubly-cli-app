@@ -80,7 +80,7 @@ func ScrapingView(m AppModel) string {
 
 // pdf printer view and update funcs
 func PrintWebsiteView(m AppModel) string {
-	tpl := TitleStyle("Print a website 📄") + "\n\n%s"
+	tpl := TitleStyle("Print a website 📄") + "\n\n%s\n"
 	if m.IsUrlWritten {
 		if m.PrintingError {
 			return fmt.Sprintf(tpl, ErrorStyle("An error accured while printing page"))
@@ -90,7 +90,7 @@ func PrintWebsiteView(m AppModel) string {
 		}
 		return fmt.Sprintf(tpl, "Printing : "+m.Text)
 	}
-	return fmt.Sprintf(tpl, m.Textarea.View()+"\n")
+	return fmt.Sprintf(tpl, m.Textarea.View())
 }
 
 func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
