@@ -125,17 +125,43 @@ func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 // website images downloader view and update functions
 func WebsiteImagesView(m AppModel) string {
 	tpl := TitleStyle("Download images from web site 🖼️") + "\n\n"
-	return tpl
+	if m.IsUrlWritten {
+		if m.PrintingError {
+			return fmt.Sprintf(tpl, ErrorStyle("An error accured while scraping page"))
+		}
+		if m.PrintingIsDone {
+			return fmt.Sprintf(tpl, SuccessStyle("Scraping images done check assets folder"))
+		}
+		return fmt.Sprintf(tpl, "Scraping images from : "+m.Text)
+	}
+	return fmt.Sprintf(tpl, m.Textarea.View())
 }
 
 func UpdateWebsiteImages(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
+	var (
+		tiCmd tea.Cmd
+	)
+	m.Textarea, tiCmd = m.Textarea.Update(msg)
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
-		switch msg.String() {
-		case "enter":
-			// m.History = append(m.History, ScrapingChoices[m.Choice])
+		switch msg.Type {
+		case tea.KeyEnter:
+			if !m.IsUrlWritten {
+				m.Text = m.Textarea.Value()
+				m.Textarea.Reset()
+				m.IsUrlWritten = true
+				m.IsTextAreaActive = false
+				return m, tea.Batch(utils.GetPageAsPdf(m.Text))
+			}
 			return m, nil
 		}
+	case types.StatusMsg:
+		switch msg {
+		case "error":
+			m.PrintingError = true
+		case "done":
+			m.PrintingIsDone = true
+		}
 	}
-	return m, nil
+	return m, tea.Batch(tiCmd)
 }
