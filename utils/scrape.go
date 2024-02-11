@@ -12,6 +12,49 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
+func GetPageAsPdf(URL string) tea.Cmd {
+	if _, err := os.Stat("./assets/"); os.IsNotExist(err) {
+		_ = os.Mkdir("./assets", 0755)
+	}
+	return func() tea.Msg {
+		// create context
+		ctx, cancel := chromedp.NewContext(context.Background())
+		defer cancel()
+		// get data
+		var buf []byte
+		if err := chromedp.Run(ctx, printToPDF(URL, &buf)); err != nil {
+			return types.StatusMsg("error")
+		}
+		// parse base url and use as a name
+		pageUrl, err := url.Parse(URL)
+		if err != nil {
+			return types.StatusMsg("error")
+		}
+		// file path
+		fileName := "./assets/" + pageUrl.Hostname() + ".pdf"
+		if err := os.WriteFile(fileName, buf, 0o644); err != nil {
+			return types.StatusMsg("error")
+		}
+		return types.StatusMsg("done")
+	}
+}
+
+func printToPDF(urlstr string, res *[]byte) chromedp.Tasks {
+	return chromedp.Tasks{
+		chromedp.Navigate(urlstr),
+		chromedp.WaitVisible(`:root`),
+		chromedp.Sleep(time.Second * 2),
+		chromedp.ActionFunc(func(ctx context.Context) error {
+			buf, _, err := page.PrintToPDF().WithPrintBackground(true).WithPaperHeight(12).Do(ctx)
+			if err != nil {
+				return err
+			}
+			*res = buf
+			return nil
+		}),
+	}
+}
+
 func GetPageImages(URL string) tea.Cmd {
 	if _, err := os.Stat("./assets/"); os.IsNotExist(err) {
 		_ = os.Mkdir("./assets", 0755)
@@ -39,7 +82,6 @@ func GetPageImages(URL string) tea.Cmd {
 	}
 }
 
-// print a specific pdf page.
 func getImages(urlstr string, res *[][]byte) chromedp.Tasks {
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
