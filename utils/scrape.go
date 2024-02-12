@@ -79,34 +79,36 @@ func GetPageImages(URL string) tea.Cmd {
 			return types.StatusMsg("error")
 		}
 		for i, image := range images[:3] {
-			reponse, err := http.Get(image)
-			if err != nil {
-				fmt.Println()
-				continue
-			}
-			defer reponse.Body.Close()
-			// image extention
 			imgType := strings.Split(image, ".")[len(strings.Split(image, "."))-1]
 			// get seque
 			sequence := fmt.Sprintf(".%s", func() string {
-				length := len(images)
-				lengthAsString := strconv.Itoa(length)
+				lengthAsString := strconv.Itoa(len(images))
 				return strings.Repeat("0", len(strings.Split(lengthAsString, ""))) + strconv.Itoa(i)
 			}())
 			//
 			fileName := "./assets/" + pageUrl.Hostname() + sequence + "." + imgType
-			//
-			file, err := os.Create(fileName)
-			if err != nil {
-				continue
-			}
-			defer file.Close()
-			_, err = io.Copy(file, reponse.Body)
-			if err != nil {
-				continue
-			}
+			// print
+			saveImage(image, fileName)
 		}
 		return types.StatusMsg("done")
+	}
+}
+
+func saveImage(url string, fileName string) {
+	reponse, err := http.Get(url)
+	if err != nil {
+		return
+	}
+	defer reponse.Body.Close()
+	// image extention
+	file, err := os.Create(fileName)
+	if err != nil {
+		return
+	}
+	defer file.Close()
+	_, err = io.Copy(file, reponse.Body)
+	if err != nil {
+		return
 	}
 }
 
