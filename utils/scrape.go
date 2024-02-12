@@ -88,28 +88,32 @@ func GetPageImages(URL string) tea.Cmd {
 			//
 			fileName := "./assets/" + pageUrl.Hostname() + sequence + "." + imgType
 			// print
-			saveImage(image, fileName)
+			err := saveImage(image, fileName)
+			if err != nil {
+				continue
+			}
 		}
 		return types.StatusMsg("done")
 	}
 }
 
-func saveImage(url string, fileName string) {
+func saveImage(url string, fileName string) error {
 	reponse, err := http.Get(url)
 	if err != nil {
-		return
+		return err
 	}
 	defer reponse.Body.Close()
 	// image extention
 	file, err := os.Create(fileName)
 	if err != nil {
-		return
+		return err
 	}
 	defer file.Close()
 	_, err = io.Copy(file, reponse.Body)
 	if err != nil {
-		return
+		return err
 	}
+	return nil
 }
 
 func getImages(urlstr string, res *[]string) chromedp.Tasks {
