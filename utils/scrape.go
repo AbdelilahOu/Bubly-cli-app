@@ -78,12 +78,12 @@ func GetPageImages(URL string) tea.Cmd {
 		if err != nil {
 			return types.StatusMsg("error")
 		}
-		for i, image := range images[:3] {
+		for i, image := range images {
 			imgType := strings.Split(image, ".")[len(strings.Split(image, "."))-1]
 			// get seque
 			sequence := fmt.Sprintf(".%s", func() string {
 				lengthAsString := strconv.Itoa(len(images))
-				return strings.Repeat("0", len(strings.Split(lengthAsString, ""))) + strconv.Itoa(i)
+				return strings.Repeat("0", len(strings.Split(lengthAsString, ""))-len(strings.Split(strconv.Itoa(i), ""))) + strconv.Itoa(i)
 			}())
 			//
 			fileName := "./assets/" + pageUrl.Hostname() + sequence + "." + imgType
@@ -122,7 +122,6 @@ func getImages(urlstr string, res *[]string) chromedp.Tasks {
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
 		chromedp.WaitVisible(`:root`),
-		chromedp.Sleep(time.Second * 2),
 		chromedp.Nodes("img", &images, chromedp.ByQueryAll),
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			var src string
