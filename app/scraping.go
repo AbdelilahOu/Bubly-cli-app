@@ -124,7 +124,7 @@ func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 
 // website images downloader view and update functions
 func WebsiteImagesView(m AppModel) string {
-	tpl := TitleStyle("Download images from web site 🖼️") + "\n\n"
+	tpl := TitleStyle("Download images from web site 🖼️") + "\n\n%s\n"
 	if m.IsUrlWritten {
 		if m.PrintingError {
 			return fmt.Sprintf(tpl, ErrorStyle("An error accured while scraping page"))
@@ -151,7 +151,7 @@ func UpdateWebsiteImages(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 				m.Textarea.Reset()
 				m.IsUrlWritten = true
 				m.IsTextAreaActive = false
-				return m, tea.Batch(utils.GetPageAsPdf(m.Text))
+				return m, tea.Batch(utils.GetPageImages(m.Text))
 			}
 			return m, nil
 		}
