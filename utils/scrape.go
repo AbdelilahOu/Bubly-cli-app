@@ -9,7 +9,6 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"time"
 
 	"github.com/AbdelilahOu/Bubly-cli-app/types"
 	tea "github.com/charmbracelet/bubbletea"
@@ -48,8 +47,7 @@ func GetPageAsPdf(URL string) tea.Cmd {
 func printToPDF(urlstr string, res *[]byte) chromedp.Tasks {
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
-		chromedp.WaitVisible(`:root`),
-		chromedp.Sleep(time.Second * 2),
+		chromedp.WaitReady(":root"),
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			buf, _, err := page.PrintToPDF().WithPrintBackground(true).WithPaperHeight(12).Do(ctx)
 			if err != nil {
@@ -66,27 +64,29 @@ func GetPageImages(URL string) tea.Cmd {
 		_ = os.Mkdir("./assets", 0755)
 	}
 	return func() tea.Msg {
+		opts := append(chromedp.DefaultExecAllocatorOptions[:],
+			chromedp.Flag("headless", false),
+		)
+		ctx, _ := chromedp.NewExecAllocator(context.Background(), opts...)
 		// create context
-		ctx, cancel := chromedp.NewContext(context.Background())
+		ctx, cancel := chromedp.NewContext(ctx)
 		defer cancel()
-		// get data
-		var images []string
-		if err := chromedp.Run(ctx, getImages(URL, &images)); err != nil {
-			return types.StatusMsg("error")
-		}
 		pageUrl, err := url.Parse(URL)
 		if err != nil {
 			return types.StatusMsg("error")
 		}
+		// get data
+		var images []string
+		if err := chromedp.Run(ctx, getImages(URL, &images)); err != nil {
+			fmt.Println(err)
+			return types.StatusMsg("error")
+		}
 		for i, image := range images {
-			imgType := strings.Split(image, ".")[len(strings.Split(image, "."))-1]
 			// get seque
-			sequence := fmt.Sprintf(".%s", func() string {
+			fileName := fmt.Sprintf("./assets/%s.%s.png", pageUrl.Hostname(), func() string {
 				lengthAsString := strconv.Itoa(len(images))
 				return strings.Repeat("0", len(strings.Split(lengthAsString, ""))-len(strings.Split(strconv.Itoa(i), ""))) + strconv.Itoa(i)
 			}())
-			//
-			fileName := "./assets/" + pageUrl.Hostname() + sequence + "." + imgType
 			// print
 			err := saveImage(image, fileName)
 			if err != nil {
@@ -121,7 +121,8 @@ func getImages(urlstr string, res *[]string) chromedp.Tasks {
 
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
-		chromedp.WaitVisible(`:root`),
+		chromedp.WaitReady(":root"),
+		chromedp.WaitReady("img"),
 		chromedp.Nodes("img", &images, chromedp.ByQueryAll),
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			var src string
