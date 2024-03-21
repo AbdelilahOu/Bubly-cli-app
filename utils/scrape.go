@@ -25,14 +25,14 @@ func GetPageAsPdf(URL string) tea.Cmd {
 		// create context
 		ctx, cancel := chromedp.NewContext(context.Background())
 		defer cancel()
-		// get data
-		var buf []byte
-		if err := chromedp.Run(ctx, printToPDF(URL, &buf)); err != nil {
-			return types.StatusMsg("error")
-		}
 		// parse base url and use as a name
 		pageUrl, err := url.Parse(URL)
 		if err != nil {
+			return types.StatusMsg("error")
+		}
+		// get data
+		var buf []byte
+		if err := chromedp.Run(ctx, printToPDF(URL, &buf)); err != nil {
 			return types.StatusMsg("error")
 		}
 		// file path
@@ -78,7 +78,6 @@ func GetPageImages(URL string) tea.Cmd {
 		// get data
 		var images []string
 		if err := chromedp.Run(ctx, getImages(URL, &images)); err != nil {
-			fmt.Println(err)
 			return types.StatusMsg("error")
 		}
 		for i, image := range images {
@@ -90,6 +89,7 @@ func GetPageImages(URL string) tea.Cmd {
 			// print
 			err := saveImage(image, fileName)
 			if err != nil {
+				fmt.Println(err)
 				continue
 			}
 		}
@@ -118,7 +118,6 @@ func saveImage(url string, fileName string) error {
 
 func getImages(urlstr string, res *[]string) chromedp.Tasks {
 	var images []*cdp.Node
-
 	return chromedp.Tasks{
 		chromedp.Navigate(urlstr),
 		chromedp.WaitReady(":root"),
