@@ -1,6 +1,7 @@
 package app
 
 import (
+	"context"
 	"fmt"
 	"strings"
 
@@ -47,15 +48,17 @@ type ViewsOptions struct {
 }
 
 type AppModel struct {
-	Choice           int
-	Quitting         bool
-	History          []string
-	Textarea         textarea.Model
-	Text             string
-	IsTextAreaActive bool
-	IsUrlWritten     bool
-	PrintingIsDone   bool
-	PrintingError    bool
+	Choice             int
+	Quitting           bool
+	History            []string
+	Textarea           textarea.Model
+	Text               string
+	IsTextAreaActive   bool
+	IsUrlWritten       bool
+	PrintingIsDone     bool
+	PrintingError      bool
+	CancelBackgroudJob context.CancelFunc
+	IsBackgroundJob    bool
 }
 
 var MainOptions = []ViewsOptions{
@@ -90,6 +93,10 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 		}
 		if k == "backspace" && len(m.History) > 1 {
+			if m.IsBackgroundJob {
+				m.CancelBackgroudJob()
+				m.IsBackgroundJob = false
+			}
 			if m.Textarea.Value() == "" {
 				m.IsUrlWritten = false
 				m.PrintingError = false
