@@ -1,6 +1,7 @@
 package app
 
 import (
+	"context"
 	"fmt"
 	"strings"
 
@@ -151,7 +152,10 @@ func UpdateWebsiteImages(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 				m.Textarea.Reset()
 				m.IsUrlWritten = true
 				m.IsTextAreaActive = false
-				return m, tea.Batch(utils.GetPageImages(m.Text))
+				m.IsBackgroundJob = true
+				ctx, cancel := context.WithCancel(context.Background())
+				m.CancelBackgroudJob = cancel
+				return m, tea.Batch(utils.GetPageImages(ctx, m.Text))
 			}
 			return m, nil
 		}
