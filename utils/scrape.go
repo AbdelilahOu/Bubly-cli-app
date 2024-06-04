@@ -18,13 +18,13 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
-func GetPageAsPdf(URL string) tea.Cmd {
+func GetPageAsPdf(ctx context.Context, URL string) tea.Cmd {
 	if _, err := os.Stat("./assets/"); os.IsNotExist(err) {
 		_ = os.Mkdir("./assets", 0755)
 	}
 	return func() tea.Msg {
 		// create context
-		ctx, cancel := chromedp.NewContext(context.Background())
+		ctx, cancel := chromedp.NewContext(ctx)
 		defer cancel()
 		// parse base url and use as a name
 		pageUrl, err := url.Parse(URL)

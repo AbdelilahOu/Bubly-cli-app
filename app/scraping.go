@@ -108,7 +108,9 @@ func UpdateWebsitePrint(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 				m.Textarea.Reset()
 				m.IsUrlWritten = true
 				m.IsTextAreaActive = false
-				return m, tea.Batch(utils.GetPageAsPdf(m.Text))
+				ctx, cancel := context.WithCancel(context.Background())
+				m.CancelBackgroudJob = cancel
+				return m, tea.Batch(utils.GetPageAsPdf(ctx, m.Text))
 			}
 			return m, nil
 		}
