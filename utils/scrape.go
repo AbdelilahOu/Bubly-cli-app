@@ -14,6 +14,8 @@ import (
 	"github.com/AbdelilahOu/Bubly-cli-app/types"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/chromedp/cdproto/cdp"
+	"github.com/chromedp/cdproto/fetch"
+	"github.com/chromedp/cdproto/network"
 	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/chromedp"
 )
@@ -70,9 +72,9 @@ func GetPageImages(ctx context.Context, URL string) tea.Cmd {
 		opts := append(chromedp.DefaultExecAllocatorOptions[:],
 			chromedp.Flag("headless", false),
 		)
-		ctx, _ := chromedp.NewExecAllocator(ctx, opts...)
-		// create context
-		ctx, cancel := chromedp.NewContext(ctx)
+		allocCtx, _ := chromedp.NewExecAllocator(ctx, opts...)
+		browserCtx, cancel := chromedp.NewContext(allocCtx)
+		chromedp.ListenTarget(browserCtx, DisableFetchExceptScripts(browserCtx))
 		defer cancel()
 		pageUrl, err := url.Parse(URL)
 		if err != nil {
@@ -80,7 +82,7 @@ func GetPageImages(ctx context.Context, URL string) tea.Cmd {
 		}
 		// get data
 		var images []string
-		if err := chromedp.Run(ctx, getImages(URL, &images)); err != nil {
+		if err := chromedp.Run(browserCtx, getImages(URL, &images)); err != nil {
 			return types.StatusMsg("error")
 		}
 		var wg sync.WaitGroup
@@ -99,6 +101,31 @@ func GetPageImages(ctx context.Context, URL string) tea.Cmd {
 		}
 		wg.Wait()
 		return types.StatusMsg("done")
+	}
+}
+
+func DisableFetchExceptScripts(ctx context.Context) func(event interface{}) {
+	return func(event interface{}) {
+		// Print Event type to see which events are triggered on Network calls
+		// fmt.Printf("------------ %#v\n", event)
+		switch ev := event.(type) {
+		case *fetch.EventRequestPaused:
+			go func() {
+				c := chromedp.FromContext(ctx)
+				ctx := cdp.WithExecutor(ctx, c.Target)
+
+				if ev.ResourceType == network.ResourceTypeImage ||
+					ev.ResourceType == network.ResourceTypeStylesheet ||
+					ev.ResourceType == network.ResourceTypeFont ||
+					ev.ResourceType == network.ResourceTypeMedia ||
+					ev.ResourceType == network.ResourceTypeManifest ||
+					ev.ResourceType == network.ResourceTypeDocument {
+					fetch.FailRequest(ev.RequestID, network.ErrorReasonBlockedByClient).Do(ctx)
+				} else {
+					fetch.ContinueRequest(ev.RequestID).Do(ctx)
+				}
+			}()
+		}
 	}
 }
 
