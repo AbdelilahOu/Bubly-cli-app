@@ -38,7 +38,9 @@ func main() {
 		IsUrlWritten:     false,
 		PrintingIsDone:   false,
 		PrintingError:    false,
+		CheckingYtdlp:    true,
 	}
+
 	p := tea.NewProgram(initialModel)
 	if _, err := p.Run(); err != nil {
 		fmt.Println("could not start program:", err)

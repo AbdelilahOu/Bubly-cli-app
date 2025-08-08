@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/AbdelilahOu/Bubly-cli-app/types"
+	"github.com/AbdelilahOu/Bubly-cli-app/utils"
 	"github.com/charmbracelet/bubbles/textarea"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -39,6 +41,12 @@ var (
 			Background(lipgloss.AdaptiveColor{Light: "#b91c1c", Dark: "#b91c1c"}).
 			Margin(1, 1, 0, 0).
 			Padding(0, 2).Render
+	WarningStyle = lipgloss.NewStyle().
+			Align(lipgloss.Left).
+			Foreground(lipgloss.Color("#FAFAFA")).
+			Background(lipgloss.AdaptiveColor{Light: "#f97316", Dark: "#f97316"}).
+			Margin(1, 1, 0, 0).
+			Padding(0, 2).Render
 )
 
 type ViewsOptions struct {
@@ -58,15 +66,19 @@ type AppModel struct {
 	PrintingError      bool
 	CancelBackgroudJob context.CancelFunc
 	IsBackgroundJob    bool
+	Warning            string
+	CheckingYtdlp      bool
+	YtdlpInstalled     bool
 }
 
 func (m AppModel) Init() tea.Cmd {
-	return nil
+	return func() tea.Msg {
+		return types.CheckYtdlpMsg{Installed: utils.CheckYtdlp()}
+	}
 }
 
 // Main update function.
 func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
-	// Make sure these keys always quit
 	if msg, ok := msg.(tea.KeyMsg); ok {
 		k := msg.String()
 		if m.IsTextAreaActive {
@@ -96,6 +108,10 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 	}
 
+	if m.CheckingYtdlp {
+		return UpdateYtdlp(msg, m)
+	}
+
 	return UpdateYoutube(msg, m)
 }
 
@@ -104,8 +120,70 @@ func (m AppModel) View() string {
 	if m.Quitting {
 		return "" + TitleStyle("See you later! 👋") + ""
 	}
+
+	if m.CheckingYtdlp {
+		return YtdlpView(m)
+	}
+
 	s := YoutubeView(m)
+	if m.Warning != "" {
+		return indent.String(""+s+""+help+"\n"+WarningStyle(m.Warning), 2)
+	}
 	return indent.String(""+s+""+help, 2)
+}
+
+func UpdateYtdlp(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
+	case types.CheckYtdlpMsg:
+		m.YtdlpInstalled = msg.Installed
+		if m.YtdlpInstalled {
+			m.CheckingYtdlp = false
+		} else {
+			m.CheckingYtdlp = true
+		}
+		return m, nil
+	case types.YtdlpInstalledMsg:
+		if msg.Err != nil {
+			m.Warning = "Error installing yt-dlp: " + msg.Err.Error()
+		} else {
+			m.Warning = "yt-dlp installed successfully"
+		}
+		m.CheckingYtdlp = false
+		return m, nil
+	case tea.KeyMsg:
+		switch msg.String() {
+		case "enter":
+			if m.Choice == 0 {
+				return m, utils.InstallYtdlp
+			} else {
+				m.CheckingYtdlp = false
+				m.Warning = "yt-dlp is not installed. Some features may not work."
+				return m, nil
+			}
+		case "up", "k":
+			if m.Choice > 0 {
+				m.Choice--
+			}
+		case "down", "j":
+			if m.Choice < 1 {
+				m.Choice++
+			}
+		}
+	}
+	return m, nil
+}
+
+func YtdlpView(m AppModel) string {
+	var s string
+	s += TitleStyle("yt-dlp is not installed") + "\n\n"
+	s += "Would you like to install it?\n\n"
+
+	choices := []string{"Yes", "No"}
+	for i, choice := range choices {
+		s += checkbox(choice, m.Choice == i) + "\n"
+	}
+
+	return indent.String(s+"\n"+help, 2)
 }
 
 func destructureOptions(options []ViewsOptions, c int) []any {
