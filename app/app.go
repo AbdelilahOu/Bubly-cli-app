@@ -3,7 +3,6 @@ package app
 import (
 	"context"
 	"fmt"
-	"strings"
 
 	"github.com/charmbracelet/bubbles/textarea"
 	tea "github.com/charmbracelet/bubbletea"
@@ -61,17 +60,6 @@ type AppModel struct {
 	IsBackgroundJob    bool
 }
 
-var MainOptions = []ViewsOptions{
-	{
-		View:        "youtube",
-		ChoiceLabel: "Youtube tools 📺",
-	},
-	{
-		View:        "scraping",
-		ChoiceLabel: "Web scraping tools 🕸️",
-	},
-}
-
 func (m AppModel) Init() tea.Cmd {
 	return nil
 }
@@ -92,7 +80,7 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				return m, tea.Quit
 			}
 		}
-		if k == "backspace" && len(m.History) > 1 {
+		if k == "backspace" && len(m.History) > 0 {
 			if m.IsBackgroundJob {
 				m.CancelBackgroudJob()
 				m.IsBackgroundJob = false
@@ -108,78 +96,16 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 	}
 
-	// we could have done this better
-	// but in order to let the second view take care of rendering sub views
-	// we need to keep track of the active view this way
-	if len(m.History) <= 1 {
-		return UpdateMain(msg, m)
-	}
-	switch m.History[1] {
-	case "youtube":
-		return UpdateYoutube(msg, m)
-	case "scraping":
-		return UpdateScraping(msg, m)
-	default:
-		return UpdateMain(msg, m)
-	}
+	return UpdateYoutube(msg, m)
 }
 
 // The main view, which just calls the appropriate sub-view
 func (m AppModel) View() string {
-	var s string
 	if m.Quitting {
-		return "\n  " + TitleStyle("See you later! 👋") + "\n"
-
+		return "" + TitleStyle("See you later! 👋") + ""
 	}
-
-	if len(m.History) <= 1 {
-		s = MainView(m)
-	} else {
-		switch m.History[1] {
-		case "youtube":
-			s = YoutubeView(m)
-		case "scraping":
-			s = ScrapingView(m)
-		default:
-			s = MainView(m)
-		}
-	}
-
-	return indent.String("\n"+s+"\n\n"+help, 2)
-}
-
-// Update loop for the first view where you're choosing a task.
-func UpdateMain(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
-	switch msg := msg.(type) {
-	case tea.KeyMsg:
-		switch msg.String() {
-		case "j", "down":
-			if len(MainOptions) > m.Choice+1 {
-				m.Choice++
-			}
-		case "k", "up":
-			if m.Choice > 0 {
-				m.Choice--
-			}
-		case "enter":
-			m = appendToHistory(m, MainOptions[m.Choice].View)
-			return m, nil
-		}
-
-	}
-	return m, nil
-}
-
-// The first view, where you're choosing a task
-func MainView(m AppModel) string {
-	c := m.Choice
-	tpl := TitleStyle("What tools do you wanna use? 🔨") + "\n\n%s"
-	choices := fmt.Sprintf(
-		strings.Repeat("%s\n", len(MainOptions)),
-		destructureOptions(MainOptions, c)...,
-	)
-
-	return fmt.Sprintf(tpl, choices)
+	s := YoutubeView(m)
+	return indent.String(""+s+""+help, 2)
 }
 
 func destructureOptions(options []ViewsOptions, c int) []any {

@@ -31,7 +31,7 @@ func main() {
 	initialModel := app.AppModel{
 		Choice:           0,
 		Quitting:         false,
-		History:          []string{"main"},
+		History:          []string{},
 		Textarea:         ta,
 		Text:             "",
 		IsTextAreaActive: false,
