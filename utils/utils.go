@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"runtime"
+	"time"
 
 	"github.com/AbdelilahOu/Bubly-cli-app/types"
 	tea "github.com/charmbracelet/bubbletea"
@@ -33,11 +34,29 @@ func CheckFfmpeg() bool {
 	return err == nil
 }
 
-func InstallYtdlp() tea.Msg {
-	fmt.Println("Installing yt-dlp...")
+// Simulate progress for yt-dlp installation
+func InstallYtdlp() tea.Cmd {
+	progress := 0
+	return tea.Tick(time.Millisecond*50, func(t time.Time) tea.Msg {
+		progress += 1
+		if progress > 100 {
+			// Installation complete
+			err := doInstallYtdlp()
+			return types.YtdlpInstalledMsg{Err: err}
+		}
+		return types.ProgressMsg{
+			Progress: progress,
+			Total:    100,
+			Message:  fmt.Sprintf("Installing yt-dlp... %d%%", progress),
+		}
+	})
+}
+
+// Actual installation logic for yt-dlp
+func doInstallYtdlp() error {
 	err := os.MkdirAll("bin", 0755)
 	if err != nil {
-		return types.YtdlpInstalledMsg{Err: err}
+		return err
 	}
 
 	var url string
@@ -49,12 +68,12 @@ func InstallYtdlp() tea.Msg {
 	case "darwin":
 		url = "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos"
 	default:
-		return types.YtdlpInstalledMsg{Err: fmt.Errorf("unsupported OS")}
+		return fmt.Errorf("unsupported OS")
 	}
 
 	resp, err := http.Get(url)
 	if err != nil {
-		return types.YtdlpInstalledMsg{Err: err}
+		return err
 	}
 	defer resp.Body.Close()
 
@@ -67,35 +86,53 @@ func InstallYtdlp() tea.Msg {
 
 	out, err := os.Create(destPath)
 	if err != nil {
-		return types.YtdlpInstalledMsg{Err: err}
+		return err
 	}
 	defer out.Close()
 
 	_, err = io.Copy(out, resp.Body)
 	if err != nil {
-		return types.YtdlpInstalledMsg{Err: err}
+		return err
 	}
 
 	err = os.Chmod(destPath, 0755)
 	if err != nil {
-		return types.YtdlpInstalledMsg{Err: err}
+		return err
 	}
 
 	// Add bin directory to path
 	path := os.Getenv("PATH")
 	err = os.Setenv("PATH", "bin;"+path)
 	if err != nil {
-		return types.YtdlpInstalledMsg{Err: err}
+		return err
 	}
 
-	return types.YtdlpInstalledMsg{Err: nil}
+	return nil
 }
 
-func InstallFfmpeg() tea.Msg {
-	fmt.Println("Installing ffmpeg...")
+// Simulate progress for ffmpeg installation
+func InstallFfmpeg() tea.Cmd {
+	progress := 0
+	return tea.Tick(time.Millisecond*50, func(t time.Time) tea.Msg {
+		progress += 1
+		if progress > 100 {
+			// Installation complete
+			err := doInstallFfmpeg()
+			return types.FfmpegInstalledMsg{Err: err}
+		}
+		return types.ProgressMsg{
+			Progress: progress,
+			Total:    100,
+			Message:  fmt.Sprintf("Installing ffmpeg... %d%%", progress),
+		}
+	})
+}
+
+// Actual installation logic for ffmpeg
+func doInstallFfmpeg() error {
 	err := os.MkdirAll("bin", 0755)
 	if err != nil {
-		return types.FfmpegInstalledMsg{Err: err}
+		return err
 	}
 
 	var url string
@@ -110,7 +147,7 @@ func InstallFfmpeg() tea.Msg {
 		// For macOS, we'll need to install via Homebrew or download static build
 		url = "https://evermeet.cx/ffmpeg/ffmpeg-5.1.7z"
 	default:
-		return types.FfmpegInstalledMsg{Err: fmt.Errorf("unsupported OS for ffmpeg installation")}
+		return fmt.Errorf("unsupported OS for ffmpeg installation")
 	}
 
 	// For now, we'll just download a simple ffmpeg binary for Windows
@@ -118,7 +155,7 @@ func InstallFfmpeg() tea.Msg {
 	if runtime.GOOS == "windows" {
 		resp, err := http.Get(url)
 		if err != nil {
-			return types.FfmpegInstalledMsg{Err: err}
+			return err
 		}
 		defer resp.Body.Close()
 
@@ -127,18 +164,20 @@ func InstallFfmpeg() tea.Msg {
 		destPath := "bin/ffmpeg.exe"
 		out, err := os.Create(destPath)
 		if err != nil {
-			return types.FfmpegInstalledMsg{Err: err}
+			return err
 		}
 		defer out.Close()
 
-		// Write a simple placeholder
-		out.WriteString("This is a placeholder for ffmpeg. Please install ffmpeg manually.")
-		
+		_, err = io.Copy(out, resp.Body)
+		if err != nil {
+			return err
+		}
+
 		err = os.Chmod(destPath, 0755)
 		if err != nil {
-			return types.FfmpegInstalledMsg{Err: err}
+			return err
 		}
 	}
 
-	return types.FfmpegInstalledMsg{Err: nil}
+	return nil
 }

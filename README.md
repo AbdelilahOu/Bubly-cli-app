@@ -14,6 +14,7 @@ A CLI tool to download video, audio, and transcriptions from YouTube.
 - Pagination for long lists
 - Detailed logging to output.log for debugging
 - Automatic installation of yt-dlp and ffmpeg
+- Clean terminal interface with auto-clear on startup
 
 ## Getting Started
 
@@ -28,6 +29,11 @@ A CLI tool to download video, audio, and transcriptions from YouTube.
 3. Run the application:
    ```bash
    go run main.go
+   ```
+   
+   Or use the Makefile:
+   ```bash
+   make run
    ```
 
 ## Troubleshooting

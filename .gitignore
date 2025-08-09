@@ -1,4 +1,7 @@
 *.exe
-assets
-output.log/*
+assets/*
+output.log
+debug.log
+build/
+*.exe~/*
 !assets/.keep

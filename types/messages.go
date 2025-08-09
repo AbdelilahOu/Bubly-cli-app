@@ -17,3 +17,9 @@ type YtdlpInstalledMsg struct {
 type FfmpegInstalledMsg struct {
 	Err error
 }
+
+type ProgressMsg struct {
+	Progress int
+	Total    int
+	Message  string
+}

@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/AbdelilahOu/Bubly-cli-app/app"
+	"github.com/AbdelilahOu/Bubly-cli-app/utils"
 
 	"github.com/charmbracelet/bubbles/textarea"
 	tea "github.com/charmbracelet/bubbletea"
@@ -11,6 +12,9 @@ import (
 )
 
 func main() {
+	// Clear the terminal screen
+	utils.ClearTerminal()
+
 	ta := textarea.New()
 	ta.Placeholder = "Pass in a url..."
 	ta.Focus()

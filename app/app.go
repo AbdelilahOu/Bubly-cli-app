@@ -3,6 +3,7 @@ package app
 import (
 	"context"
 	"fmt"
+	"strings"
 
 	"github.com/AbdelilahOu/Bubly-cli-app/types"
 	"github.com/AbdelilahOu/Bubly-cli-app/utils"
@@ -126,6 +127,11 @@ type AppModel struct {
 	Warning            string
 	CheckingYtdlp      bool
 	CheckingFfmpeg     bool
+	InstallingYtdlp    bool
+	InstallingFfmpeg   bool
+	InstallationProgress int
+	InstallationTotal    int
+	InstallationMessage  string
 	YtdlpInstalled     bool
 	FfmpegInstalled    bool
 	AudioFormatSel     *AudioFormatSelection
@@ -177,7 +183,7 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 	}
 
-	if m.CheckingYtdlp {
+	if m.CheckingYtdlp || m.CheckingFfmpeg || m.InstallingYtdlp || m.InstallingFfmpeg {
 		return UpdateYtdlp(msg, m)
 	}
 
@@ -190,7 +196,7 @@ func (m AppModel) View() string {
 		return "" + TitleStyle("See you later! 👋") + ""
 	}
 
-	if m.CheckingYtdlp || m.CheckingFfmpeg {
+	if m.CheckingYtdlp || m.CheckingFfmpeg || m.InstallingYtdlp || m.InstallingFfmpeg {
 		return YtdlpView(m)
 	}
 
@@ -224,25 +230,36 @@ func UpdateYtdlp(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 			m.Warning = "Error installing yt-dlp: " + msg.Err.Error()
 		} else {
 			m.Warning = "yt-dlp installed successfully"
+			m.YtdlpInstalled = true
 		}
 		m.CheckingYtdlp = false
+		m.InstallingYtdlp = false
 		return m, nil
 	case types.FfmpegInstalledMsg:
 		if msg.Err != nil {
 			m.Warning = "Error installing ffmpeg: " + msg.Err.Error()
 		} else {
 			m.Warning = "ffmpeg installed successfully"
+			m.FfmpegInstalled = true
 		}
 		m.CheckingFfmpeg = false
+		m.InstallingFfmpeg = false
+		return m, nil
+	case types.ProgressMsg:
+		m.InstallationProgress = msg.Progress
+		m.InstallationTotal = msg.Total
+		m.InstallationMessage = msg.Message
 		return m, nil
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "enter":
 			if m.Choice == 0 {
 				if m.CheckingYtdlp {
-					return m, utils.InstallYtdlp
+					m.InstallingYtdlp = true
+					return m, utils.InstallYtdlp()
 				} else if m.CheckingFfmpeg {
-					return m, utils.InstallFfmpeg
+					m.InstallingFfmpeg = true
+					return m, utils.InstallFfmpeg()
 				}
 			} else {
 				if m.CheckingYtdlp {
@@ -269,21 +286,53 @@ func UpdateYtdlp(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 
 func YtdlpView(m AppModel) string {
 	var s string
-	
+
 	if m.CheckingYtdlp {
-		s += TitleStyle("yt-dlp is not installed") + "\n\n"
-		s += "Would you like to install it?\n\n"
+		if m.InstallingYtdlp {
+			s += TitleStyle("Installing yt-dlp") + "\n\n"
+			// Show progress bar
+			progressBar := ""
+			if m.InstallationTotal > 0 {
+				progressWidth := 50
+				progress := m.InstallationProgress * progressWidth / m.InstallationTotal
+				progressBar = "[" + strings.Repeat("=", progress) + strings.Repeat(" ", progressWidth-progress) + "]"
+			}
+			s += fmt.Sprintf("%s %d%%\n", progressBar, m.InstallationProgress)
+			if m.InstallationMessage != "" {
+				s += "\n" + m.InstallationMessage + "\n"
+			}
+		} else {
+			s += TitleStyle("yt-dlp is not installed") + "\n\n"
+			s += "Would you like to install it?\n\n"
+		}
 	} else if m.CheckingFfmpeg {
-		s += TitleStyle("ffmpeg is not installed") + "\n\n"
-		s += "Would you like to install it?\n\n"
+		if m.InstallingFfmpeg {
+			s += TitleStyle("Installing ffmpeg") + "\n\n"
+			// Show progress bar
+			progressBar := ""
+			if m.InstallationTotal > 0 {
+				progressWidth := 50
+				progress := m.InstallationProgress * progressWidth / m.InstallationTotal
+				progressBar = "[" + strings.Repeat("=", progress) + strings.Repeat(" ", progressWidth-progress) + "]"
+			}
+			s += fmt.Sprintf("%s %d%%\n", progressBar, m.InstallationProgress)
+			if m.InstallationMessage != "" {
+				s += "\n" + m.InstallationMessage + "\n"
+			}
+		} else {
+			s += TitleStyle("ffmpeg is not installed") + "\n\n"
+			s += "Would you like to install it?\n\n"
+		}
 	} else {
 		// Both are installed or user chose to continue without them
 		return ""
 	}
 
-	choices := []string{"Yes", "No"}
-	for i, choice := range choices {
-		s += checkbox(choice, m.Choice == i) + "\n"
+	if !m.InstallingYtdlp && !m.InstallingFfmpeg {
+		choices := []string{"Yes", "No"}
+		for i, choice := range choices {
+			s += checkbox(choice, m.Choice == i) + "\n"
+		}
 	}
 
 	return indent.String(s+"\n"+help, 2)
