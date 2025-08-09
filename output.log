@@ -1,0 +1,17 @@
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Testing format 233
+[info] ndZlob4-Sfg: Downloading 1 format(s): 233
+[download] assets\audio.mp4 has already been downloaded
+[download] 100% of   22.35MiB
+ERROR: Postprocessing: ffprobe and ffmpeg not found. Please install or provide the path using --ffmpeg-location
+[generic] Extracting URL: 
+ERROR: [generic] '' is not a valid URL. Set --default-search "ytsearch" (or run  yt-dlp "ytsearch:" ) to search YouTube

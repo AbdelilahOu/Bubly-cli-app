@@ -39,6 +39,9 @@ func main() {
 		PrintingIsDone:   false,
 		PrintingError:    false,
 		CheckingYtdlp:    true,
+		CheckingFfmpeg:   true,
+		Page:             0,
+		ItemsPerPage:     5,
 	}
 
 	p := tea.NewProgram(initialModel)

@@ -49,6 +49,63 @@ var (
 			Padding(0, 2).Render
 )
 
+// Styles for audio formats
+var (
+	audioQualityStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#7D56F4")).
+				Padding(0, 1).
+				Render
+
+	audioFormatStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#FAFAFA")).
+				Background(lipgloss.Color("#16a34a")).
+				Padding(0, 1).
+				Render
+
+	audioFileSizeStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#f97316")).
+				Padding(0, 1).
+				Render
+)
+
+// Styles for video formats
+var (
+	videoQualityStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#7D56F4")).
+				Padding(0, 1).
+				Render
+
+	videoFormatStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#FAFAFA")).
+				Background(lipgloss.Color("#16a34a")).
+				Padding(0, 1).
+				Render
+
+	videoResolutionStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#f97316")).
+				Padding(0, 1).
+				Render
+
+	videoFileSizeStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#2563eb")).
+				Padding(0, 1).
+				Render
+)
+
+// Styles for subtitles
+var (
+	subtitleLangStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#7D56F4")).
+				Padding(0, 1).
+				Render
+
+	subtitleSelectedStyle = lipgloss.NewStyle().
+				Foreground(lipgloss.Color("#FAFAFA")).
+				Background(lipgloss.Color("#16a34a")).
+				Padding(0, 1).
+				Render
+)
+
 type ViewsOptions struct {
 	View        string
 	ChoiceLabel string
@@ -68,13 +125,25 @@ type AppModel struct {
 	IsBackgroundJob    bool
 	Warning            string
 	CheckingYtdlp      bool
+	CheckingFfmpeg     bool
 	YtdlpInstalled     bool
+	FfmpegInstalled    bool
+	AudioFormatSel     *AudioFormatSelection
+	VideoFormatSel     *VideoFormatSelection
+	SubtitleSel        *SubtitleSelection
+	Page               int // For pagination
+	ItemsPerPage       int // Number of items to show per page
 }
 
 func (m AppModel) Init() tea.Cmd {
-	return func() tea.Msg {
-		return types.CheckYtdlpMsg{Installed: utils.CheckYtdlp()}
-	}
+	return tea.Batch(
+		func() tea.Msg {
+			return types.CheckYtdlpMsg{Installed: utils.CheckYtdlp()}
+		},
+		func() tea.Msg {
+			return types.CheckFfmpegMsg{Installed: utils.CheckFfmpeg()}
+		},
+	)
 }
 
 // Main update function.
@@ -121,7 +190,7 @@ func (m AppModel) View() string {
 		return "" + TitleStyle("See you later! 👋") + ""
 	}
 
-	if m.CheckingYtdlp {
+	if m.CheckingYtdlp || m.CheckingFfmpeg {
 		return YtdlpView(m)
 	}
 
@@ -136,10 +205,18 @@ func UpdateYtdlp(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case types.CheckYtdlpMsg:
 		m.YtdlpInstalled = msg.Installed
-		if m.YtdlpInstalled {
-			m.CheckingYtdlp = false
-		} else {
+		if !m.YtdlpInstalled {
 			m.CheckingYtdlp = true
+		} else {
+			m.CheckingYtdlp = false
+		}
+		return m, nil
+	case types.CheckFfmpegMsg:
+		m.FfmpegInstalled = msg.Installed
+		if !m.FfmpegInstalled {
+			m.CheckingFfmpeg = true
+		} else {
+			m.CheckingFfmpeg = false
 		}
 		return m, nil
 	case types.YtdlpInstalledMsg:
@@ -150,14 +227,31 @@ func UpdateYtdlp(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 		}
 		m.CheckingYtdlp = false
 		return m, nil
+	case types.FfmpegInstalledMsg:
+		if msg.Err != nil {
+			m.Warning = "Error installing ffmpeg: " + msg.Err.Error()
+		} else {
+			m.Warning = "ffmpeg installed successfully"
+		}
+		m.CheckingFfmpeg = false
+		return m, nil
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "enter":
 			if m.Choice == 0 {
-				return m, utils.InstallYtdlp
+				if m.CheckingYtdlp {
+					return m, utils.InstallYtdlp
+				} else if m.CheckingFfmpeg {
+					return m, utils.InstallFfmpeg
+				}
 			} else {
-				m.CheckingYtdlp = false
-				m.Warning = "yt-dlp is not installed. Some features may not work."
+				if m.CheckingYtdlp {
+					m.CheckingYtdlp = false
+					m.Warning = "yt-dlp is not installed. Some features may not work."
+				} else if m.CheckingFfmpeg {
+					m.CheckingFfmpeg = false
+					m.Warning = "ffmpeg is not installed. Some features may not work."
+				}
 				return m, nil
 			}
 		case "up", "k":
@@ -175,8 +269,17 @@ func UpdateYtdlp(msg tea.Msg, m AppModel) (tea.Model, tea.Cmd) {
 
 func YtdlpView(m AppModel) string {
 	var s string
-	s += TitleStyle("yt-dlp is not installed") + "\n\n"
-	s += "Would you like to install it?\n\n"
+	
+	if m.CheckingYtdlp {
+		s += TitleStyle("yt-dlp is not installed") + "\n\n"
+		s += "Would you like to install it?\n\n"
+	} else if m.CheckingFfmpeg {
+		s += TitleStyle("ffmpeg is not installed") + "\n\n"
+		s += "Would you like to install it?\n\n"
+	} else {
+		// Both are installed or user chose to continue without them
+		return ""
+	}
 
 	choices := []string{"Yes", "No"}
 	for i, choice := range choices {

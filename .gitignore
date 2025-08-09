@@ -1,2 +1,4 @@
 *.exe
 assets
+output.log/*
+!assets/.keep

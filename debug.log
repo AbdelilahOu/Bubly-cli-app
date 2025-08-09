@@ -1,0 +1,1274 @@
+Fetching formats for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: exec: Stdout already set
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: exec: Stdout already set
+Received AudioFormatMsg, Error: Error fetching formats: exec: Stdout already set. Check output.log for details., Formats count: 0
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: 
+
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: 
+
+Command executed, err: exec: Stdout already set
+Received AudioFormatMsg, Error: Error fetching formats: exec: Stdout already set. Check output.log for details., Formats count: 0
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 6147
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available formats for ndZlob4-Sfg:
+ID      EXT   RESOLUTION FPS CH |    FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+--------------------------------------------------------------------------------------------------------------------------------
+sb3     mhtml 48x27        0    |                   mhtml | images                                  storyboard
+sb2     mhtml 80x45        0    |                   mhtml | images                                  storyboard
+sb1     mhtml 160x90       0    |                   mhtml | images                                  storyboard
+sb0     mhtml 320x180      0    |                   mhtml | 
+Parsed 10 formats
+Format 0: ID=233, Quality=Low quality
+Format 1: ID=234, Quality=High quality
+Format 2: ID=249-drc, Quality=48 kbps
+Format 3: ID=250-drc, Quality=48 kbps
+Format 4: ID=249, Quality=48 kbps
+Format 5: ID=250, Quality=48 kbps
+Format 6: ID=140-drc, Quality=44 kbps
+Format 7: ID=251-drc, Quality=48 kbps
+Format 8: ID=140, Quality=44 kbps
+Format 9: ID=251, Quality=48 kbps
+Received AudioFormatMsg, Error: , Formats count: 10
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=2, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=2, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=3, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=3, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=4, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=4, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=5, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=5, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=6, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=6, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=7, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=7, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=8, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=8, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=9, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=8, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=8, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=7, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=7, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=6, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=6, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=5, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=5, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=4, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=4, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=3, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=3, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=2, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=2, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=0, Selected=true, Downloading=true, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=10, Choice=0, Selected=true
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=10, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+Fetching subtitle languages for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 11593
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available automatic captions for ndZlob4-Sfg:
+Language Name                  Formats
+ab       Abkhazian             vtt, srt, ttml, srv3, srv2, srv1, json3
+aa       Afar                  vtt, srt, ttml, srv3, srv2, srv1, json3
+af       Afrikaans             vtt, srt, ttml, srv3, srv2, srv1, json3
+ak       Akan                  vtt, srt, ttml, srv3, srv2, srv1, json3
+sq       Albanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+am       Amharic               vtt, srt, ttml, srv3, srv2, srv1, json3
+ar       Arabic                vtt, srt, ttml, srv3, srv2, srv1, json3
+hy       Armenian              vtt, srt, ttml, srv3, srv2, srv1, json3
+as       Assam
+Parsed 160 subtitle languages
+Language 0: Code=[info], Name=[info]
+Language 1: Code=Language, Name=Language
+Language 2: Code=ab, Name=Ab
+Language 3: Code=aa, Name=Aa
+Language 4: Code=af, Name=Af
+Language 5: Code=ak, Name=Ak
+Language 6: Code=sq, Name=Sq
+Language 7: Code=am, Name=Am
+Language 8: Code=ar, Name=Arabic
+Language 9: Code=hy, Name=Hy
+Language 10: Code=as, Name=As
+Language 11: Code=ay, Name=Ay
+Language 12: Code=az, Name=Az
+Language 13: Code=bn, Name=Bn
+Language 14: Code=ba, Name=Ba
+Language 15: Code=eu, Name=Eu
+Language 16: Code=be, Name=Be
+Language 17: Code=bho, Name=Bho
+Language 18: Code=bs, Name=Bs
+Language 19: Code=br, Name=Br
+Language 20: Code=bg, Name=Bg
+Language 21: Code=my, Name=My
+Language 22: Code=ca, Name=Ca
+Language 23: Code=ceb, Name=Ceb
+Language 24: Code=zh-Hans, Name=Zh-Hans
+Language 25: Code=zh-Hant, Name=Zh-Hant
+Language 26: Code=co, Name=Co
+Language 27: Code=hr, Name=Hr
+Language 28: Code=cs, Name=Cs
+Language 29: Code=da, Name=Da
+Language 30: Code=dv, Name=Dv
+Language 31: Code=nl, Name=Nl
+Language 32: Code=dz, Name=Dz
+Language 33: Code=en-orig, Name=En-orig
+Language 34: Code=en, Name=English
+Language 35: Code=eo, Name=Eo
+Language 36: Code=et, Name=Et
+Language 37: Code=ee, Name=Ee
+Language 38: Code=fo, Name=Fo
+Language 39: Code=fj, Name=Fj
+Language 40: Code=fil, Name=Fil
+Language 41: Code=fi, Name=Fi
+Language 42: Code=fr, Name=French
+Language 43: Code=gaa, Name=Gaa
+Language 44: Code=gl, Name=Gl
+Language 45: Code=lg, Name=Lg
+Language 46: Code=ka, Name=Ka
+Language 47: Code=de, Name=German
+Language 48: Code=el, Name=El
+Language 49: Code=gn, Name=Gn
+Language 50: Code=gu, Name=Gu
+Language 51: Code=ht, Name=Ht
+Language 52: Code=ha, Name=Ha
+Language 53: Code=haw, Name=Haw
+Language 54: Code=iw, Name=Iw
+Language 55: Code=hi, Name=Hi
+Language 56: Code=hmn, Name=Hmn
+Language 57: Code=hu, Name=Hu
+Language 58: Code=is, Name=Is
+Language 59: Code=ig, Name=Ig
+Language 60: Code=id, Name=Id
+Language 61: Code=iu, Name=Iu
+Language 62: Code=ga, Name=Ga
+Language 63: Code=it, Name=Italian
+Language 64: Code=ja, Name=Japanese
+Language 65: Code=jv, Name=Jv
+Language 66: Code=kl, Name=Kl
+Language 67: Code=kn, Name=Kn
+Language 68: Code=kk, Name=Kk
+Language 69: Code=kha, Name=Kha
+Language 70: Code=km, Name=Km
+Language 71: Code=rw, Name=Rw
+Language 72: Code=ko, Name=Korean
+Language 73: Code=kri, Name=Kri
+Language 74: Code=ku, Name=Ku
+Language 75: Code=ky, Name=Ky
+Language 76: Code=lo, Name=Lo
+Language 77: Code=la, Name=La
+Language 78: Code=lv, Name=Lv
+Language 79: Code=ln, Name=Ln
+Language 80: Code=lt, Name=Lt
+Language 81: Code=lua, Name=Lua
+Language 82: Code=luo, Name=Luo
+Language 83: Code=lb, Name=Lb
+Language 84: Code=mk, Name=Mk
+Language 85: Code=mg, Name=Mg
+Language 86: Code=ms, Name=Ms
+Language 87: Code=ml, Name=Ml
+Language 88: Code=mt, Name=Mt
+Language 89: Code=gv, Name=Gv
+Language 90: Code=mi, Name=Mi
+Language 91: Code=mr, Name=Mr
+Language 92: Code=mn, Name=Mn
+Language 93: Code=mfe, Name=Mfe
+Language 94: Code=ne, Name=Ne
+Language 95: Code=new, Name=New
+Language 96: Code=nso, Name=Nso
+Language 97: Code=no, Name=No
+Language 98: Code=ny, Name=Ny
+Language 99: Code=oc, Name=Oc
+Language 100: Code=or, Name=Or
+Language 101: Code=om, Name=Om
+Language 102: Code=os, Name=Os
+Language 103: Code=pam, Name=Pam
+Language 104: Code=ps, Name=Ps
+Language 105: Code=fa, Name=Fa
+Language 106: Code=pl, Name=Pl
+Language 107: Code=pt, Name=Portuguese
+Language 108: Code=pt-PT, Name=Pt-PT
+Language 109: Code=pa, Name=Pa
+Language 110: Code=qu, Name=Qu
+Language 111: Code=ro, Name=Ro
+Language 112: Code=rn, Name=Rn
+Language 113: Code=ru, Name=Russian
+Language 114: Code=sm, Name=Sm
+Language 115: Code=sg, Name=Sg
+Language 116: Code=sa, Name=Sa
+Language 117: Code=gd, Name=Gd
+Language 118: Code=sr, Name=Sr
+Language 119: Code=crs, Name=Crs
+Language 120: Code=sn, Name=Sn
+Language 121: Code=sd, Name=Sd
+Language 122: Code=si, Name=Si
+Language 123: Code=sk, Name=Sk
+Language 124: Code=sl, Name=Sl
+Language 125: Code=so, Name=So
+Language 126: Code=st, Name=St
+Language 127: Code=es, Name=Spanish
+Language 128: Code=su, Name=Su
+Language 129: Code=sw, Name=Sw
+Language 130: Code=ss, Name=Ss
+Language 131: Code=sv, Name=Sv
+Language 132: Code=tg, Name=Tg
+Language 133: Code=ta, Name=Ta
+Language 134: Code=tt, Name=Tt
+Language 135: Code=te, Name=Te
+Language 136: Code=th, Name=Th
+Language 137: Code=bo, Name=Bo
+Language 138: Code=ti, Name=Ti
+Language 139: Code=to, Name=To
+Language 140: Code=ts, Name=Ts
+Language 141: Code=tn, Name=Tn
+Language 142: Code=tum, Name=Tum
+Language 143: Code=tr, Name=Tr
+Language 144: Code=tk, Name=Tk
+Language 145: Code=uk, Name=Uk
+Language 146: Code=ur, Name=Ur
+Language 147: Code=ug, Name=Ug
+Language 148: Code=uz, Name=Uz
+Language 149: Code=ve, Name=Ve
+Language 150: Code=vi, Name=Vi
+Language 151: Code=war, Name=War
+Language 152: Code=cy, Name=Cy
+Language 153: Code=fy, Name=Fy
+Language 154: Code=wo, Name=Wo
+Language 155: Code=xh, Name=Xh
+Language 156: Code=yi, Name=Yi
+Language 157: Code=yo, Name=Yo
+Language 158: Code=zu, Name=Zu
+Language 159: Code=ndZlob4-Sfg, Name=NdZlob4-Sfg
+Fetching subtitle languages for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 11593
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available automatic captions for ndZlob4-Sfg:
+Language Name                  Formats
+ab       Abkhazian             vtt, srt, ttml, srv3, srv2, srv1, json3
+aa       Afar                  vtt, srt, ttml, srv3, srv2, srv1, json3
+af       Afrikaans             vtt, srt, ttml, srv3, srv2, srv1, json3
+ak       Akan                  vtt, srt, ttml, srv3, srv2, srv1, json3
+sq       Albanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+am       Amharic               vtt, srt, ttml, srv3, srv2, srv1, json3
+ar       Arabic                vtt, srt, ttml, srv3, srv2, srv1, json3
+hy       Armenian              vtt, srt, ttml, srv3, srv2, srv1, json3
+as       Assam
+Parsed 157 subtitle languages
+Language 0: Code=ab, Name=Ab
+Language 1: Code=aa, Name=Aa
+Language 2: Code=af, Name=Af
+Language 3: Code=ak, Name=Ak
+Language 4: Code=sq, Name=Sq
+Language 5: Code=am, Name=Am
+Language 6: Code=ar, Name=Arabic
+Language 7: Code=hy, Name=Hy
+Language 8: Code=as, Name=As
+Language 9: Code=ay, Name=Ay
+Language 10: Code=az, Name=Az
+Language 11: Code=bn, Name=Bn
+Language 12: Code=ba, Name=Ba
+Language 13: Code=eu, Name=Eu
+Language 14: Code=be, Name=Be
+Language 15: Code=bho, Name=Bho
+Language 16: Code=bs, Name=Bs
+Language 17: Code=br, Name=Br
+Language 18: Code=bg, Name=Bg
+Language 19: Code=my, Name=My
+Language 20: Code=ca, Name=Ca
+Language 21: Code=ceb, Name=Ceb
+Language 22: Code=zh-Hans, Name=Chinese (Simplified)
+Language 23: Code=zh-Hant, Name=Chinese (Traditional)
+Language 24: Code=co, Name=Co
+Language 25: Code=hr, Name=Hr
+Language 26: Code=cs, Name=Cs
+Language 27: Code=da, Name=Da
+Language 28: Code=dv, Name=Dv
+Language 29: Code=nl, Name=Nl
+Language 30: Code=dz, Name=Dz
+Language 31: Code=en, Name=English
+Language 32: Code=eo, Name=Eo
+Language 33: Code=et, Name=Et
+Language 34: Code=ee, Name=Ee
+Language 35: Code=fo, Name=Fo
+Language 36: Code=fj, Name=Fj
+Language 37: Code=fil, Name=Fil
+Language 38: Code=fi, Name=Fi
+Language 39: Code=fr, Name=French
+Language 40: Code=gaa, Name=Gaa
+Language 41: Code=gl, Name=Gl
+Language 42: Code=lg, Name=Lg
+Language 43: Code=ka, Name=Ka
+Language 44: Code=de, Name=German
+Language 45: Code=el, Name=El
+Language 46: Code=gn, Name=Gn
+Language 47: Code=gu, Name=Gu
+Language 48: Code=ht, Name=Ht
+Language 49: Code=ha, Name=Ha
+Language 50: Code=haw, Name=Haw
+Language 51: Code=iw, Name=Iw
+Language 52: Code=hi, Name=Hindi
+Language 53: Code=hmn, Name=Hmn
+Language 54: Code=hu, Name=Hu
+Language 55: Code=is, Name=Is
+Language 56: Code=ig, Name=Ig
+Language 57: Code=id, Name=Id
+Language 58: Code=iu, Name=Iu
+Language 59: Code=ga, Name=Ga
+Language 60: Code=it, Name=Italian
+Language 61: Code=ja, Name=Japanese
+Language 62: Code=jv, Name=Jv
+Language 63: Code=kl, Name=Kl
+Language 64: Code=kn, Name=Kn
+Language 65: Code=kk, Name=Kk
+Language 66: Code=kha, Name=Kha
+Language 67: Code=km, Name=Km
+Language 68: Code=rw, Name=Rw
+Language 69: Code=ko, Name=Korean
+Language 70: Code=kri, Name=Kri
+Language 71: Code=ku, Name=Ku
+Language 72: Code=ky, Name=Ky
+Language 73: Code=lo, Name=Lo
+Language 74: Code=la, Name=La
+Language 75: Code=lv, Name=Lv
+Language 76: Code=ln, Name=Ln
+Language 77: Code=lt, Name=Lt
+Language 78: Code=lua, Name=Lua
+Language 79: Code=luo, Name=Luo
+Language 80: Code=lb, Name=Lb
+Language 81: Code=mk, Name=Mk
+Language 82: Code=mg, Name=Mg
+Language 83: Code=ms, Name=Ms
+Language 84: Code=ml, Name=Ml
+Language 85: Code=mt, Name=Mt
+Language 86: Code=gv, Name=Gv
+Language 87: Code=mi, Name=Mi
+Language 88: Code=mr, Name=Mr
+Language 89: Code=mn, Name=Mn
+Language 90: Code=mfe, Name=Mfe
+Language 91: Code=ne, Name=Ne
+Language 92: Code=new, Name=New
+Language 93: Code=nso, Name=Nso
+Language 94: Code=no, Name=No
+Language 95: Code=ny, Name=Ny
+Language 96: Code=oc, Name=Oc
+Language 97: Code=or, Name=Or
+Language 98: Code=om, Name=Om
+Language 99: Code=os, Name=Os
+Language 100: Code=pam, Name=Pam
+Language 101: Code=ps, Name=Ps
+Language 102: Code=fa, Name=Fa
+Language 103: Code=pl, Name=Pl
+Language 104: Code=pt, Name=Portuguese
+Language 105: Code=pt-PT, Name=Pt-PT
+Language 106: Code=pa, Name=Pa
+Language 107: Code=qu, Name=Qu
+Language 108: Code=ro, Name=Ro
+Language 109: Code=rn, Name=Rn
+Language 110: Code=ru, Name=Russian
+Language 111: Code=sm, Name=Sm
+Language 112: Code=sg, Name=Sg
+Language 113: Code=sa, Name=Sa
+Language 114: Code=gd, Name=Gd
+Language 115: Code=sr, Name=Sr
+Language 116: Code=crs, Name=Crs
+Language 117: Code=sn, Name=Sn
+Language 118: Code=sd, Name=Sd
+Language 119: Code=si, Name=Si
+Language 120: Code=sk, Name=Sk
+Language 121: Code=sl, Name=Sl
+Language 122: Code=so, Name=So
+Language 123: Code=st, Name=St
+Language 124: Code=es, Name=Spanish
+Language 125: Code=su, Name=Su
+Language 126: Code=sw, Name=Sw
+Language 127: Code=ss, Name=Ss
+Language 128: Code=sv, Name=Sv
+Language 129: Code=tg, Name=Tg
+Language 130: Code=ta, Name=Ta
+Language 131: Code=tt, Name=Tt
+Language 132: Code=te, Name=Te
+Language 133: Code=th, Name=Th
+Language 134: Code=bo, Name=Bo
+Language 135: Code=ti, Name=Ti
+Language 136: Code=to, Name=To
+Language 137: Code=ts, Name=Ts
+Language 138: Code=tn, Name=Tn
+Language 139: Code=tum, Name=Tum
+Language 140: Code=tr, Name=Turkish
+Language 141: Code=tk, Name=Tk
+Language 142: Code=uk, Name=Uk
+Language 143: Code=ur, Name=Ur
+Language 144: Code=ug, Name=Ug
+Language 145: Code=uz, Name=Uz
+Language 146: Code=ve, Name=Ve
+Language 147: Code=vi, Name=Vi
+Language 148: Code=war, Name=War
+Language 149: Code=cy, Name=Cy
+Language 150: Code=fy, Name=Fy
+Language 151: Code=wo, Name=Wo
+Language 152: Code=xh, Name=Xh
+Language 153: Code=yi, Name=Yi
+Language 154: Code=yo, Name=Yo
+Language 155: Code=zu, Name=Zu
+Language 156: Code=ndZlob4-Sfg, Name=NdZlob4-Sfg
+Fetching subtitle languages for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 11593
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available automatic captions for ndZlob4-Sfg:
+Language Name                  Formats
+ab       Abkhazian             vtt, srt, ttml, srv3, srv2, srv1, json3
+aa       Afar                  vtt, srt, ttml, srv3, srv2, srv1, json3
+af       Afrikaans             vtt, srt, ttml, srv3, srv2, srv1, json3
+ak       Akan                  vtt, srt, ttml, srv3, srv2, srv1, json3
+sq       Albanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+am       Amharic               vtt, srt, ttml, srv3, srv2, srv1, json3
+ar       Arabic                vtt, srt, ttml, srv3, srv2, srv1, json3
+hy       Armenian              vtt, srt, ttml, srv3, srv2, srv1, json3
+as       Assam
+Parsed 157 subtitle languages
+Language 0: Code=ab, Name=Ab
+Language 1: Code=aa, Name=Aa
+Language 2: Code=af, Name=Af
+Language 3: Code=ak, Name=Ak
+Language 4: Code=sq, Name=Sq
+Language 5: Code=am, Name=Am
+Language 6: Code=ar, Name=Arabic
+Language 7: Code=hy, Name=Hy
+Language 8: Code=as, Name=As
+Language 9: Code=ay, Name=Ay
+Language 10: Code=az, Name=Az
+Language 11: Code=bn, Name=Bn
+Language 12: Code=ba, Name=Ba
+Language 13: Code=eu, Name=Eu
+Language 14: Code=be, Name=Be
+Language 15: Code=bho, Name=Bho
+Language 16: Code=bs, Name=Bs
+Language 17: Code=br, Name=Br
+Language 18: Code=bg, Name=Bg
+Language 19: Code=my, Name=My
+Language 20: Code=ca, Name=Ca
+Language 21: Code=ceb, Name=Ceb
+Language 22: Code=zh-Hans, Name=Chinese (Simplified)
+Language 23: Code=zh-Hant, Name=Chinese (Traditional)
+Language 24: Code=co, Name=Co
+Language 25: Code=hr, Name=Hr
+Language 26: Code=cs, Name=Cs
+Language 27: Code=da, Name=Da
+Language 28: Code=dv, Name=Dv
+Language 29: Code=nl, Name=Nl
+Language 30: Code=dz, Name=Dz
+Language 31: Code=en, Name=English
+Language 32: Code=eo, Name=Eo
+Language 33: Code=et, Name=Et
+Language 34: Code=ee, Name=Ee
+Language 35: Code=fo, Name=Fo
+Language 36: Code=fj, Name=Fj
+Language 37: Code=fil, Name=Fil
+Language 38: Code=fi, Name=Fi
+Language 39: Code=fr, Name=French
+Language 40: Code=gaa, Name=Gaa
+Language 41: Code=gl, Name=Gl
+Language 42: Code=lg, Name=Lg
+Language 43: Code=ka, Name=Ka
+Language 44: Code=de, Name=German
+Language 45: Code=el, Name=El
+Language 46: Code=gn, Name=Gn
+Language 47: Code=gu, Name=Gu
+Language 48: Code=ht, Name=Ht
+Language 49: Code=ha, Name=Ha
+Language 50: Code=haw, Name=Haw
+Language 51: Code=iw, Name=Iw
+Language 52: Code=hi, Name=Hindi
+Language 53: Code=hmn, Name=Hmn
+Language 54: Code=hu, Name=Hu
+Language 55: Code=is, Name=Is
+Language 56: Code=ig, Name=Ig
+Language 57: Code=id, Name=Id
+Language 58: Code=iu, Name=Iu
+Language 59: Code=ga, Name=Ga
+Language 60: Code=it, Name=Italian
+Language 61: Code=ja, Name=Japanese
+Language 62: Code=jv, Name=Jv
+Language 63: Code=kl, Name=Kl
+Language 64: Code=kn, Name=Kn
+Language 65: Code=kk, Name=Kk
+Language 66: Code=kha, Name=Kha
+Language 67: Code=km, Name=Km
+Language 68: Code=rw, Name=Rw
+Language 69: Code=ko, Name=Korean
+Language 70: Code=kri, Name=Kri
+Language 71: Code=ku, Name=Ku
+Language 72: Code=ky, Name=Ky
+Language 73: Code=lo, Name=Lo
+Language 74: Code=la, Name=La
+Language 75: Code=lv, Name=Lv
+Language 76: Code=ln, Name=Ln
+Language 77: Code=lt, Name=Lt
+Language 78: Code=lua, Name=Lua
+Language 79: Code=luo, Name=Luo
+Language 80: Code=lb, Name=Lb
+Language 81: Code=mk, Name=Mk
+Language 82: Code=mg, Name=Mg
+Language 83: Code=ms, Name=Ms
+Language 84: Code=ml, Name=Ml
+Language 85: Code=mt, Name=Mt
+Language 86: Code=gv, Name=Gv
+Language 87: Code=mi, Name=Mi
+Language 88: Code=mr, Name=Mr
+Language 89: Code=mn, Name=Mn
+Language 90: Code=mfe, Name=Mfe
+Language 91: Code=ne, Name=Ne
+Language 92: Code=new, Name=New
+Language 93: Code=nso, Name=Nso
+Language 94: Code=no, Name=No
+Language 95: Code=ny, Name=Ny
+Language 96: Code=oc, Name=Oc
+Language 97: Code=or, Name=Or
+Language 98: Code=om, Name=Om
+Language 99: Code=os, Name=Os
+Language 100: Code=pam, Name=Pam
+Language 101: Code=ps, Name=Ps
+Language 102: Code=fa, Name=Fa
+Language 103: Code=pl, Name=Pl
+Language 104: Code=pt, Name=Portuguese
+Language 105: Code=pt-PT, Name=Pt-PT
+Language 106: Code=pa, Name=Pa
+Language 107: Code=qu, Name=Qu
+Language 108: Code=ro, Name=Ro
+Language 109: Code=rn, Name=Rn
+Language 110: Code=ru, Name=Russian
+Language 111: Code=sm, Name=Sm
+Language 112: Code=sg, Name=Sg
+Language 113: Code=sa, Name=Sa
+Language 114: Code=gd, Name=Gd
+Language 115: Code=sr, Name=Sr
+Language 116: Code=crs, Name=Crs
+Language 117: Code=sn, Name=Sn
+Language 118: Code=sd, Name=Sd
+Language 119: Code=si, Name=Si
+Language 120: Code=sk, Name=Sk
+Language 121: Code=sl, Name=Sl
+Language 122: Code=so, Name=So
+Language 123: Code=st, Name=St
+Language 124: Code=es, Name=Spanish
+Language 125: Code=su, Name=Su
+Language 126: Code=sw, Name=Sw
+Language 127: Code=ss, Name=Ss
+Language 128: Code=sv, Name=Sv
+Language 129: Code=tg, Name=Tg
+Language 130: Code=ta, Name=Ta
+Language 131: Code=tt, Name=Tt
+Language 132: Code=te, Name=Te
+Language 133: Code=th, Name=Th
+Language 134: Code=bo, Name=Bo
+Language 135: Code=ti, Name=Ti
+Language 136: Code=to, Name=To
+Language 137: Code=ts, Name=Ts
+Language 138: Code=tn, Name=Tn
+Language 139: Code=tum, Name=Tum
+Language 140: Code=tr, Name=Turkish
+Language 141: Code=tk, Name=Tk
+Language 142: Code=uk, Name=Uk
+Language 143: Code=ur, Name=Ur
+Language 144: Code=ug, Name=Ug
+Language 145: Code=uz, Name=Uz
+Language 146: Code=ve, Name=Ve
+Language 147: Code=vi, Name=Vi
+Language 148: Code=war, Name=War
+Language 149: Code=cy, Name=Cy
+Language 150: Code=fy, Name=Fy
+Language 151: Code=wo, Name=Wo
+Language 152: Code=xh, Name=Xh
+Language 153: Code=yi, Name=Yi
+Language 154: Code=yo, Name=Yo
+Language 155: Code=zu, Name=Zu
+Language 156: Code=ndZlob4-Sfg, Name=NdZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 2637
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available formats for ndZlob4-Sfg:
+ID  EXT   RESOLUTION FPS CH |    FILESIZE   TBR PROTO | VCODEC          VBR ACODEC     ASR MORE INFO
+-----------------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                   mhtml | images                             storyboard
+sb2 mhtml 80x45        0    |                   mhtml | images                             storyboard
+sb1 mhtml 160x90       0    |                   mhtml | images                             storyboard
+sb0 mhtml 320x180      0    |                   mhtml | images                             storyboard
+233
+Parsed 2 formats
+Format 0: ID=233, Quality=Low quality
+Format 1: ID=234, Quality=High quality
+Received AudioFormatMsg, Error: , Formats count: 2
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=true, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 6147
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available formats for ndZlob4-Sfg:
+ID      EXT   RESOLUTION FPS CH |    FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+--------------------------------------------------------------------------------------------------------------------------------
+sb3     mhtml 48x27        0    |                   mhtml | images                                  storyboard
+sb2     mhtml 80x45        0    |                   mhtml | images                                  storyboard
+sb1     mhtml 160x90       0    |                   mhtml | images                                  storyboard
+sb0     mhtml 320x180      0    |                   mhtml | 
+Parsed 6 formats
+Format 0: ID=249, Quality=48 kbps
+Format 1: ID=250, Quality=48 kbps
+Format 2: ID=251, Quality=48 kbps
+Format 3: ID=140, Quality=44 kbps
+Format 4: ID=233, Quality=Low quality
+Format 5: ID=234, Quality=High quality
+Received AudioFormatMsg, Error: , Formats count: 6
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=2, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=2, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=3, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=3, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=4, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=4, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=5, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=5, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=true, Downloading=true, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=0, Selected=true
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+Command executed, err: <nil>
+Output length: 2637
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
+[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[info] Available formats for ndZlob4-Sfg:
+ID  EXT   RESOLUTION FPS CH |    FILESIZE   TBR PROTO | VCODEC          VBR ACODEC     ASR MORE INFO
+-----------------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                   mhtml | images                             storyboard
+sb2 mhtml 80x45        0    |                   mhtml | images                             storyboard
+sb1 mhtml 160x90       0    |                   mhtml | images                             storyboard
+sb0 mhtml 320x180      0    |                   mhtml | images                             storyboard
+233
+Parsed 2 formats
+Format 0: ID=233, Quality=Low quality
+Format 1: ID=234, Quality=High quality
+Received AudioFormatMsg, Error: , Formats count: 2
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=true, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+Fetching video formats for URL: 
+Command executed, err: exit status 1
+Error output: ERROR: [generic] '' is not a valid URL. Set --default-search "ytsearch" (or run  yt-dlp "ytsearch:" ) to search YouTube
+
