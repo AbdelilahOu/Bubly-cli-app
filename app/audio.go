@@ -33,10 +33,9 @@ type AudioFormatSelection struct {
 
 func (m AppModel) fetchAudioFormats(url string) tea.Cmd {
 	return func() tea.Msg {
-		// Create assets directory if it doesn't exist
+
 		os.MkdirAll("assets", 0755)
 
-		// Run yt-dlp to get format information
 		var path, ffmpegPath string
 		if isWindows() {
 			path = "bin/yt-dlp.exe"
@@ -46,36 +45,30 @@ func (m AppModel) fetchAudioFormats(url string) tea.Cmd {
 			ffmpegPath = "bin/ffmpeg"
 		}
 
-		// Create or open log file
 		logFile, err := os.OpenFile("output.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 		if err != nil {
 			return AudioFormatMsg{Error: fmt.Sprintf("Error creating log file: %v", err)}
 		}
 		defer logFile.Close()
 
-		// Create buffers to capture output
 		var outBuf, errBuf strings.Builder
-		
-		// Check if ffmpeg exists
+
 		_, err = os.Stat(ffmpegPath)
 		useFfmpeg := err == nil
 
-		// Prepare arguments
 		var args []string
 		args = append(args, "-F", url)
-		
-		// Add ffmpeg location if it exists
+
 		if useFfmpeg {
 			args = append(args, "--ffmpeg-location", ffmpegPath)
 		}
-		
+
 		cmd := exec.Command(path, args...)
 		cmd.Stdout = io.MultiWriter(&outBuf, logFile)
 		cmd.Stderr = io.MultiWriter(&errBuf, logFile)
-		
+
 		err = cmd.Run()
-		
-		// Write debug info
+
 		debugFile, _ := os.OpenFile("debug.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 		if debugFile != nil {
 			defer debugFile.Close()
@@ -84,7 +77,7 @@ func (m AppModel) fetchAudioFormats(url string) tea.Cmd {
 			if err == nil {
 				output := outBuf.String()
 				fmt.Fprintf(debugFile, "Output length: %d\n", len(output))
-				// Only write first 1000 chars to debug to avoid huge logs
+
 				if len(output) > 1000 {
 					fmt.Fprintf(debugFile, "Output (first 1000 chars): %s\n", output[:1000])
 				} else {
@@ -94,20 +87,20 @@ func (m AppModel) fetchAudioFormats(url string) tea.Cmd {
 				fmt.Fprintf(debugFile, "Error output: %s\n", errBuf.String())
 			}
 		}
-		
+
 		if err != nil {
 			return AudioFormatMsg{Error: fmt.Sprintf("Error fetching formats: %v. Check output.log for details.", err)}
 		}
 
 		formats := ParseAudioFormats(outBuf.String())
-		
+
 		if debugFile != nil {
 			fmt.Fprintf(debugFile, "Parsed %d formats\n", len(formats))
 			for i, f := range formats {
 				fmt.Fprintf(debugFile, "Format %d: ID=%s, Quality=%s\n", i, f.ID, f.Quality)
 			}
 		}
-		
+
 		return AudioFormatMsg{URL: url, Formats: formats}
 	}
 }
@@ -130,7 +123,6 @@ func ParseAudioFormats(output string) []AudioFormat {
 			if len(fields) >= 3 {
 				id := fields[0]
 
-				// Skip formats with "-drc" as they seem to have issues
 				if strings.Contains(id, "-drc") {
 					continue
 				}
@@ -138,7 +130,6 @@ func ParseAudioFormats(output string) []AudioFormat {
 				quality := "Audio"
 				filesize := "Unknown size"
 
-				// Look for bitrate information
 				for _, field := range fields {
 					if strings.HasSuffix(field, "k") {
 						bitrateStr := strings.TrimSuffix(field, "k")
@@ -152,7 +143,6 @@ func ParseAudioFormats(output string) []AudioFormat {
 					}
 				}
 
-				// Try to get better quality descriptions
 				if quality == "Audio" {
 					if strings.Contains(line, "Default, high") {
 						quality = "High quality"
@@ -163,7 +153,6 @@ func ParseAudioFormats(output string) []AudioFormat {
 					}
 				}
 
-				// Determine format type from extension
 				formatType := "audio"
 				if len(fields) > 1 {
 					ext := fields[1]
@@ -181,7 +170,6 @@ func ParseAudioFormats(output string) []AudioFormat {
 					Filesize: filesize,
 				}
 
-				// Avoid duplicates
 				exists := false
 				for _, f := range formats {
 					if f.ID == format.ID {
@@ -197,21 +185,18 @@ func ParseAudioFormats(output string) []AudioFormat {
 		}
 	}
 
-	// Sort formats by quality (higher bitrate first)
 	sort.Slice(formats, func(i, j int) bool {
-		// Extract bitrate numbers for comparison
+
 		iBitrate := extractBitrate(formats[i].Quality)
 		jBitrate := extractBitrate(formats[j].Quality)
-		
-		// If we can't extract bitrates, sort alphabetically
+
 		if iBitrate == 0 && jBitrate == 0 {
 			return formats[i].Quality > formats[j].Quality
 		}
-		
+
 		return iBitrate > jBitrate
 	})
 
-	// If no formats found, create some default options
 	if len(formats) == 0 {
 		formats = append(formats, AudioFormat{
 			ID:       "bestaudio",
@@ -230,7 +215,6 @@ func ParseAudioFormats(output string) []AudioFormat {
 	return formats
 }
 
-// Helper function to extract bitrate from quality string
 func extractBitrate(quality string) int {
 	re := regexp.MustCompile(`(\d+)\s*kbps`)
 	matches := re.FindStringSubmatch(quality)
@@ -244,7 +228,7 @@ func extractBitrate(quality string) int {
 
 func (m AppModel) downloadAudio(url string, formatID string) tea.Cmd {
 	return func() tea.Msg {
-		// Create assets directory if it doesn't exist
+
 		os.MkdirAll("assets", 0755)
 
 		var path, ffmpegPath string
@@ -256,59 +240,51 @@ func (m AppModel) downloadAudio(url string, formatID string) tea.Cmd {
 			ffmpegPath = "bin/ffmpeg"
 		}
 
-		// Create or open log file
 		logFile, err := os.OpenFile("output.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 		if err != nil {
 			return AudioDownloadMsg{Error: fmt.Sprintf("Error creating log file: %v", err)}
 		}
 		defer logFile.Close()
 
-		// Create buffers to capture output
 		var outBuf, errBuf strings.Builder
-		
-		// Check if ffmpeg exists
+
 		_, err = os.Stat(ffmpegPath)
 		useFfmpeg := err == nil
-		
-		// Use better parameters for audio download
+
 		var args []string
 		args = append(args, "-f", formatID, "-x", "--audio-quality", "0")
-		
-		// Add ffmpeg location if it exists
+
 		if useFfmpeg {
 			args = append(args, "--ffmpeg-location", ffmpegPath)
 		}
-		
-		// Add rate limiting parameters
+
 		args = append(args, "--sleep-requests", "1", "--sleep-interval", "5", "--max-sleep-interval", "10")
 		args = append(args, "-o", "assets/audio.%(ext)s", url)
-		
+
 		cmd := exec.Command(path, args...)
 		cmd.Stdout = io.MultiWriter(&outBuf, logFile)
 		cmd.Stderr = io.MultiWriter(&errBuf, logFile)
 		err = cmd.Run()
-		
+
 		if err != nil {
 			errorOutput := errBuf.String()
-			// Check for specific errors
+
 			if strings.Contains(errorOutput, "403") || strings.Contains(errorOutput, "Forbidden") {
-				// Try with a different approach - use bestaudio if specific format fails
+
 				args = []string{"-f", "bestaudio", "-x", "--audio-quality", "0"}
-				
-				// Add ffmpeg location if it exists
+
 				if useFfmpeg {
 					args = append(args, "--ffmpeg-location", ffmpegPath)
 				}
-				
-				// Add rate limiting parameters
+
 				args = append(args, "--sleep-requests", "1", "--sleep-interval", "5", "--max-sleep-interval", "10")
 				args = append(args, "-o", "assets/audio.%(ext)s", url)
-				
+
 				cmd = exec.Command(path, args...)
 				cmd.Stdout = io.MultiWriter(&outBuf, logFile)
 				cmd.Stderr = io.MultiWriter(&errBuf, logFile)
 				err = cmd.Run()
-				
+
 				if err != nil {
 					return AudioDownloadMsg{Error: fmt.Sprintf("Error downloading audio: %v. Check output.log for details.", err)}
 				}

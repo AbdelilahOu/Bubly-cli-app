@@ -34,13 +34,12 @@ func CheckFfmpeg() bool {
 	return err == nil
 }
 
-// Simulate progress for yt-dlp installation
 func InstallYtdlp() tea.Cmd {
 	progress := 0
 	return tea.Tick(time.Millisecond*50, func(t time.Time) tea.Msg {
 		progress += 1
 		if progress > 100 {
-			// Installation complete
+
 			err := doInstallYtdlp()
 			return types.YtdlpInstalledMsg{Err: err}
 		}
@@ -52,7 +51,6 @@ func InstallYtdlp() tea.Cmd {
 	})
 }
 
-// Actual installation logic for yt-dlp
 func doInstallYtdlp() error {
 	err := os.MkdirAll("bin", 0755)
 	if err != nil {
@@ -100,7 +98,6 @@ func doInstallYtdlp() error {
 		return err
 	}
 
-	// Add bin directory to path
 	path := os.Getenv("PATH")
 	err = os.Setenv("PATH", "bin;"+path)
 	if err != nil {
@@ -110,13 +107,12 @@ func doInstallYtdlp() error {
 	return nil
 }
 
-// Simulate progress for ffmpeg installation
 func InstallFfmpeg() tea.Cmd {
 	progress := 0
 	return tea.Tick(time.Millisecond*50, func(t time.Time) tea.Msg {
 		progress += 1
 		if progress > 100 {
-			// Installation complete
+
 			err := doInstallFfmpeg()
 			return types.FfmpegInstalledMsg{Err: err}
 		}
@@ -128,7 +124,6 @@ func InstallFfmpeg() tea.Cmd {
 	})
 }
 
-// Actual installation logic for ffmpeg
 func doInstallFfmpeg() error {
 	err := os.MkdirAll("bin", 0755)
 	if err != nil {
@@ -138,20 +133,18 @@ func doInstallFfmpeg() error {
 	var url string
 	switch runtime.GOOS {
 	case "windows":
-		// For Windows, we'll download a pre-built ffmpeg binary
+
 		url = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip"
 	case "linux":
-		// For Linux, we'll need to install via package manager or download static build
+
 		url = "https://johnvansickle.com/ffmpeg/releases/ffmpeg-git-amd64-static.tar.xz"
 	case "darwin":
-		// For macOS, we'll need to install via Homebrew or download static build
+
 		url = "https://evermeet.cx/ffmpeg/ffmpeg-5.1.7z"
 	default:
 		return fmt.Errorf("unsupported OS for ffmpeg installation")
 	}
 
-	// For now, we'll just download a simple ffmpeg binary for Windows
-	// In a real implementation, you'd want to handle extraction of archives
 	if runtime.GOOS == "windows" {
 		resp, err := http.Get(url)
 		if err != nil {
@@ -159,8 +152,6 @@ func doInstallFfmpeg() error {
 		}
 		defer resp.Body.Close()
 
-		// Just create a placeholder for now - in a real implementation you'd 
-		// download and extract the actual ffmpeg binary
 		destPath := "bin/ffmpeg.exe"
 		out, err := os.Create(destPath)
 		if err != nil {

@@ -6,17 +6,16 @@ import (
 	"runtime"
 )
 
-// ClearTerminal clears the terminal screen
 func ClearTerminal() {
 	var cmd *exec.Cmd
-	
+
 	switch runtime.GOOS {
 	case "windows":
 		cmd = exec.Command("cmd", "/c", "cls")
 	default:
 		cmd = exec.Command("clear")
 	}
-	
+
 	cmd.Stdout = os.Stdout
 	cmd.Run()
 }

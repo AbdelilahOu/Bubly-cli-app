@@ -14,7 +14,6 @@ import (
 	"github.com/muesli/termenv"
 )
 
-// General stuff for styling the view
 var (
 	term      = termenv.EnvColorProfile()
 	subtle    = makeFgStyle("241")
@@ -50,7 +49,6 @@ var (
 			Padding(0, 2).Render
 )
 
-// Styles for audio formats
 var (
 	audioQualityStyle = lipgloss.NewStyle().
 				Foreground(lipgloss.Color("#7D56F4")).
@@ -69,7 +67,6 @@ var (
 				Render
 )
 
-// Styles for video formats
 var (
 	videoQualityStyle = lipgloss.NewStyle().
 				Foreground(lipgloss.Color("#7D56F4")).
@@ -93,7 +90,6 @@ var (
 				Render
 )
 
-// Styles for subtitles
 var (
 	subtitleLangStyle = lipgloss.NewStyle().
 				Foreground(lipgloss.Color("#7D56F4")).
@@ -113,32 +109,32 @@ type ViewsOptions struct {
 }
 
 type AppModel struct {
-	Choice             int
-	Quitting           bool
-	History            []string
-	Textarea           textarea.Model
-	Text               string
-	IsTextAreaActive   bool
-	IsUrlWritten       bool
-	PrintingIsDone     bool
-	PrintingError      bool
-	CancelBackgroudJob context.CancelFunc
-	IsBackgroundJob    bool
-	Warning            string
-	CheckingYtdlp      bool
-	CheckingFfmpeg     bool
-	InstallingYtdlp    bool
-	InstallingFfmpeg   bool
+	Choice               int
+	Quitting             bool
+	History              []string
+	Textarea             textarea.Model
+	Text                 string
+	IsTextAreaActive     bool
+	IsUrlWritten         bool
+	PrintingIsDone       bool
+	PrintingError        bool
+	CancelBackgroudJob   context.CancelFunc
+	IsBackgroundJob      bool
+	Warning              string
+	CheckingYtdlp        bool
+	CheckingFfmpeg       bool
+	InstallingYtdlp      bool
+	InstallingFfmpeg     bool
 	InstallationProgress int
 	InstallationTotal    int
 	InstallationMessage  string
-	YtdlpInstalled     bool
-	FfmpegInstalled    bool
-	AudioFormatSel     *AudioFormatSelection
-	VideoFormatSel     *VideoFormatSelection
-	SubtitleSel        *SubtitleSelection
-	Page               int // For pagination
-	ItemsPerPage       int // Number of items to show per page
+	YtdlpInstalled       bool
+	FfmpegInstalled      bool
+	AudioFormatSel       *AudioFormatSelection
+	VideoFormatSel       *VideoFormatSelection
+	SubtitleSel          *SubtitleSelection
+	Page                 int
+	ItemsPerPage         int
 }
 
 func (m AppModel) Init() tea.Cmd {
@@ -152,7 +148,6 @@ func (m AppModel) Init() tea.Cmd {
 	)
 }
 
-// Main update function.
 func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	if msg, ok := msg.(tea.KeyMsg); ok {
 		k := msg.String()
@@ -190,7 +185,6 @@ func (m AppModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return UpdateYoutube(msg, m)
 }
 
-// The main view, which just calls the appropriate sub-view
 func (m AppModel) View() string {
 	if m.Quitting {
 		return "" + TitleStyle("See you later! 👋") + ""
@@ -290,7 +284,7 @@ func YtdlpView(m AppModel) string {
 	if m.CheckingYtdlp {
 		if m.InstallingYtdlp {
 			s += TitleStyle("Installing yt-dlp") + "\n\n"
-			// Show progress bar
+
 			progressBar := ""
 			if m.InstallationTotal > 0 {
 				progressWidth := 50
@@ -308,7 +302,7 @@ func YtdlpView(m AppModel) string {
 	} else if m.CheckingFfmpeg {
 		if m.InstallingFfmpeg {
 			s += TitleStyle("Installing ffmpeg") + "\n\n"
-			// Show progress bar
+
 			progressBar := ""
 			if m.InstallationTotal > 0 {
 				progressWidth := 50
@@ -324,7 +318,7 @@ func YtdlpView(m AppModel) string {
 			s += "Would you like to install it?\n\n"
 		}
 	} else {
-		// Both are installed or user chose to continue without them
+
 		return ""
 	}
 
@@ -353,7 +347,6 @@ func checkbox(label string, checked bool) string {
 	return fmt.Sprintf("[ ] %s", label)
 }
 
-// Utils
 func appendToHistory(m AppModel, s string) AppModel {
 	m.History = append(m.History, s)
 	return m
@@ -364,12 +357,10 @@ func removeFromHistory(m AppModel) AppModel {
 	return m
 }
 
-// Color a string's foreground with the given value.
 func colorFg(val, color string) string {
 	return termenv.String(val).Foreground(term.Color(color)).String()
 }
 
-// Return a function that will colorize the foreground of a given string.
 func makeFgStyle(color string) func(string) string {
 	return termenv.Style{}.Foreground(term.Color(color)).Styled
 }

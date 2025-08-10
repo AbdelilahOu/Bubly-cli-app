@@ -12,7 +12,6 @@ import (
 )
 
 func main() {
-	// Clear the terminal screen
 	utils.ClearTerminal()
 
 	ta := textarea.New()
@@ -25,7 +24,6 @@ func main() {
 	ta.SetWidth(50)
 	ta.SetHeight(2)
 
-	// Remove cursor line styling
 	ta.FocusedStyle.CursorLine = lipgloss.NewStyle()
 
 	ta.ShowLineNumbers = false
