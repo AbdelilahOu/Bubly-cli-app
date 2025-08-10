@@ -352,8 +352,37 @@ func appendToHistory(m AppModel, s string) AppModel {
 	return m
 }
 func removeFromHistory(m AppModel) AppModel {
+
+	if len(m.History) > 0 {
+		switch m.History[len(m.History)-1] {
+		case "yt-download-audio":
+
+			m.AudioFormatSel = nil
+			m.IsUrlWritten = false
+			m.Text = ""
+			m.Textarea.Reset()
+		case "yt-download-video":
+
+			m.VideoFormatSel = nil
+			m.IsUrlWritten = false
+			m.Text = ""
+			m.Textarea.Reset()
+		case "yt-download-subtitles":
+
+			m.SubtitleSel = nil
+			m.IsUrlWritten = false
+			m.Text = ""
+			m.Textarea.Reset()
+		}
+	}
+
 	m.History = m.History[:len(m.History)-1]
 	m.Choice = 0
+
+	m.PrintingError = false
+	m.PrintingIsDone = false
+	m.Warning = ""
+
 	return m
 }
 

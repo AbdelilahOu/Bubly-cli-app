@@ -1,31 +1,65 @@
-[youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
-[youtube] ndZlob4-Sfg: Downloading webpage
+[youtube] Extracting URL: https://www.youtube.com/watch?v=_7JsfHTyqiw
+[youtube] _7JsfHTyqiw: Downloading webpage
+[youtube] _7JsfHTyqiw: Downloading tv client config
+[youtube] _7JsfHTyqiw: Downloading player 010fbc8d-main
+[youtube] _7JsfHTyqiw: Downloading tv player API JSON
+[youtube] _7JsfHTyqiw: Downloading ios player API JSON
+[youtube] _7JsfHTyqiw: Downloading m3u8 information
+_7JsfHTyqiw has no automatic captions
+_7JsfHTyqiw has no subtitles
+[youtube] Extracting URL: https://www.youtube.com/watch?v=_7JsfHTyqiw
+[youtube] _7JsfHTyqiw: Downloading webpage
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] _7JsfHTyqiw: Downloading tv client config
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] _7JsfHTyqiw: Downloading tv player API JSON
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] _7JsfHTyqiw: Downloading ios player API JSON
+WARNING: [youtube] _7JsfHTyqiw: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading m3u8 information
+[youtube] _7JsfHTyqiw: Downloading m3u8 information
+[info] Testing format 628
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+[info] Testing format 623
+WARNING: Unable to download format 628. Skipping...
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 623. Skipping...
+[info] Testing format 617
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 617. Skipping...
+[info] Testing format 312
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 312. Skipping...
+[info] Testing format 612
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 612. Skipping...
+[info] Testing format 311
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 311. Skipping...
+[info] Testing format 606
+[info] Testing format 234
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 234. Skipping...
 [info] Testing format 233
-[info] ndZlob4-Sfg: Downloading 1 format(s): 233
-[download] assets\audio.mp4 has already been downloaded
-[download] 100% of   22.35MiB
-ERROR: Postprocessing: ffprobe and ffmpeg not found. Please install or provide the path using --ffmpeg-location
-[generic] Extracting URL: 
-ERROR: [generic] '' is not a valid URL. Set --default-search "ytsearch" (or run  yt-dlp "ytsearch:" ) to search YouTube
-[generic] Extracting URL: 
-ERROR: [generic] '' is not a valid URL. Set --default-search "ytsearch" (or run  yt-dlp "ytsearch:" ) to search YouTube
-[youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
-[youtube] ndZlob4-Sfg: Downloading webpage
-[youtube] ndZlob4-Sfg: Downloading tv client config
-[youtube] ndZlob4-Sfg: Downloading player 761c1f12-player_es5_vflset_en_US_base
-[youtube] ndZlob4-Sfg: Downloading tv player API JSON
-[youtube] ndZlob4-Sfg: Downloading ios player API JSON
-WARNING: [youtube] ndZlob4-Sfg: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-[youtube] ndZlob4-Sfg: Downloading m3u8 information
-[info] Available automatic captions for ndZlob4-Sfg:
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 233. Skipping...
+[info] _7JsfHTyqiw: Downloading 1 format(s): 18
+[info] There are no subtitles for the requested languages
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9KYABy_KgEM
+[youtube] 9KYABy_KgEM: Downloading webpage
+[youtube] 9KYABy_KgEM: Downloading tv client config
+[youtube] 9KYABy_KgEM: Downloading tv player API JSON
+[youtube] 9KYABy_KgEM: Downloading ios player API JSON
+[youtube] 9KYABy_KgEM: Downloading m3u8 information
+[info] Available automatic captions for 9KYABy_KgEM:
 Language Name                  Formats
 ab       Abkhazian             vtt, srt, ttml, srv3, srv2, srv1, json3
 aa       Afar                  vtt, srt, ttml, srv3, srv2, srv1, json3
@@ -58,7 +92,6 @@ da       Danish                vtt, srt, ttml, srv3, srv2, srv1, json3
 dv       Divehi                vtt, srt, ttml, srv3, srv2, srv1, json3
 nl       Dutch                 vtt, srt, ttml, srv3, srv2, srv1, json3
 dz       Dzongkha              vtt, srt, ttml, srv3, srv2, srv1, json3
-en-orig  English (Original)    vtt, srt, ttml, srv3, srv2, srv1, json3
 en       English               vtt, srt, ttml, srv3, srv2, srv1, json3
 eo       Esperanto             vtt, srt, ttml, srv3, srv2, srv1, json3
 et       Estonian              vtt, srt, ttml, srv3, srv2, srv1, json3
@@ -72,6 +105,7 @@ gaa      Ga                    vtt, srt, ttml, srv3, srv2, srv1, json3
 gl       Galician              vtt, srt, ttml, srv3, srv2, srv1, json3
 lg       Ganda                 vtt, srt, ttml, srv3, srv2, srv1, json3
 ka       Georgian              vtt, srt, ttml, srv3, srv2, srv1, json3
+de-orig  German (Original)     vtt, srt, ttml, srv3, srv2, srv1, json3
 de       German                vtt, srt, ttml, srv3, srv2, srv1, json3
 el       Greek                 vtt, srt, ttml, srv3, srv2, srv1, json3
 gn       Guarani               vtt, srt, ttml, srv3, srv2, srv1, json3
@@ -184,19 +218,425 @@ xh       Xhosa                 vtt, srt, ttml, srv3, srv2, srv1, json3
 yi       Yiddish               vtt, srt, ttml, srv3, srv2, srv1, json3
 yo       Yoruba                vtt, srt, ttml, srv3, srv2, srv1, json3
 zu       Zulu                  vtt, srt, ttml, srv3, srv2, srv1, json3
-ndZlob4-Sfg has no subtitles
-[youtube] Extracting URL: https://www.youtube.com/watch?v=ndZlob4-Sfg
-[youtube] ndZlob4-Sfg: Downloading webpage
+9KYABy_KgEM has no subtitles
+[youtube] Extracting URL: https://www.youtube.com/watch?v=_7JsfHTyqiw
+[youtube] _7JsfHTyqiw: Downloading webpage
+[youtube] _7JsfHTyqiw: Downloading tv client config
+[youtube] _7JsfHTyqiw: Downloading tv player API JSON
+[youtube] _7JsfHTyqiw: Downloading ios player API JSON
+WARNING: [youtube] _7JsfHTyqiw: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[youtube] _7JsfHTyqiw: Downloading m3u8 information
+_7JsfHTyqiw has no automatic captions
+_7JsfHTyqiw has no subtitles
+[youtube] Extracting URL: https://www.youtube.com/watch?v=_7JsfHTyqiw
+[youtube] _7JsfHTyqiw: Downloading webpage
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading tv client config
+[youtube] _7JsfHTyqiw: Downloading tv client config
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading tv player API JSON
+[youtube] _7JsfHTyqiw: Downloading tv player API JSON
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading ios player API JSON
+[youtube] _7JsfHTyqiw: Downloading ios player API JSON
 [youtube] Sleeping 1.0 seconds ...
-[youtube] ndZlob4-Sfg: Downloading m3u8 information
-[info] ndZlob4-Sfg: Downloading subtitles: zh-Hans
+[youtube] _7JsfHTyqiw: Downloading m3u8 information
 WARNING: ffmpeg not found. The downloaded format may not be the best available. Installing ffmpeg is strongly recommended: https://github.com/yt-dlp/yt-dlp#dependencies
-[info] ndZlob4-Sfg: Downloading 1 format(s): 18
-[info] Writing video subtitles to: assets\subtitles.zh-Hans.vtt
-ERROR: Unable to download video subtitles for 'zh-Hans': HTTP Error 429: Too Many Requests
+[info] _7JsfHTyqiw: Downloading 1 format(s): 18
+[info] There are no subtitles for the requested languages
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9KYABy_KgEM
+[youtube] 9KYABy_KgEM: Downloading webpage
+[youtube] 9KYABy_KgEM: Downloading tv client config
+[youtube] 9KYABy_KgEM: Downloading tv player API JSON
+[youtube] 9KYABy_KgEM: Downloading ios player API JSON
+WARNING: [youtube] 9KYABy_KgEM: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[youtube] 9KYABy_KgEM: Downloading m3u8 information
+[info] Available automatic captions for 9KYABy_KgEM:
+Language Name                  Formats
+ab       Abkhazian             vtt, srt, ttml, srv3, srv2, srv1, json3
+aa       Afar                  vtt, srt, ttml, srv3, srv2, srv1, json3
+af       Afrikaans             vtt, srt, ttml, srv3, srv2, srv1, json3
+ak       Akan                  vtt, srt, ttml, srv3, srv2, srv1, json3
+sq       Albanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+am       Amharic               vtt, srt, ttml, srv3, srv2, srv1, json3
+ar       Arabic                vtt, srt, ttml, srv3, srv2, srv1, json3
+hy       Armenian              vtt, srt, ttml, srv3, srv2, srv1, json3
+as       Assamese              vtt, srt, ttml, srv3, srv2, srv1, json3
+ay       Aymara                vtt, srt, ttml, srv3, srv2, srv1, json3
+az       Azerbaijani           vtt, srt, ttml, srv3, srv2, srv1, json3
+bn       Bangla                vtt, srt, ttml, srv3, srv2, srv1, json3
+ba       Bashkir               vtt, srt, ttml, srv3, srv2, srv1, json3
+eu       Basque                vtt, srt, ttml, srv3, srv2, srv1, json3
+be       Belarusian            vtt, srt, ttml, srv3, srv2, srv1, json3
+bho      Bhojpuri              vtt, srt, ttml, srv3, srv2, srv1, json3
+bs       Bosnian               vtt, srt, ttml, srv3, srv2, srv1, json3
+br       Breton                vtt, srt, ttml, srv3, srv2, srv1, json3
+bg       Bulgarian             vtt, srt, ttml, srv3, srv2, srv1, json3
+my       Burmese               vtt, srt, ttml, srv3, srv2, srv1, json3
+ca       Catalan               vtt, srt, ttml, srv3, srv2, srv1, json3
+ceb      Cebuano               vtt, srt, ttml, srv3, srv2, srv1, json3
+zh-Hans  Chinese (Simplified)  vtt, srt, ttml, srv3, srv2, srv1, json3
+zh-Hant  Chinese (Traditional) vtt, srt, ttml, srv3, srv2, srv1, json3
+co       Corsican              vtt, srt, ttml, srv3, srv2, srv1, json3
+hr       Croatian              vtt, srt, ttml, srv3, srv2, srv1, json3
+cs       Czech                 vtt, srt, ttml, srv3, srv2, srv1, json3
+da       Danish                vtt, srt, ttml, srv3, srv2, srv1, json3
+dv       Divehi                vtt, srt, ttml, srv3, srv2, srv1, json3
+nl       Dutch                 vtt, srt, ttml, srv3, srv2, srv1, json3
+dz       Dzongkha              vtt, srt, ttml, srv3, srv2, srv1, json3
+en       English               vtt, srt, ttml, srv3, srv2, srv1, json3
+eo       Esperanto             vtt, srt, ttml, srv3, srv2, srv1, json3
+et       Estonian              vtt, srt, ttml, srv3, srv2, srv1, json3
+ee       Ewe                   vtt, srt, ttml, srv3, srv2, srv1, json3
+fo       Faroese               vtt, srt, ttml, srv3, srv2, srv1, json3
+fj       Fijian                vtt, srt, ttml, srv3, srv2, srv1, json3
+fil      Filipino              vtt, srt, ttml, srv3, srv2, srv1, json3
+fi       Finnish               vtt, srt, ttml, srv3, srv2, srv1, json3
+fr       French                vtt, srt, ttml, srv3, srv2, srv1, json3
+gaa      Ga                    vtt, srt, ttml, srv3, srv2, srv1, json3
+gl       Galician              vtt, srt, ttml, srv3, srv2, srv1, json3
+lg       Ganda                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ka       Georgian              vtt, srt, ttml, srv3, srv2, srv1, json3
+de-orig  German (Original)     vtt, srt, ttml, srv3, srv2, srv1, json3
+de       German                vtt, srt, ttml, srv3, srv2, srv1, json3
+el       Greek                 vtt, srt, ttml, srv3, srv2, srv1, json3
+gn       Guarani               vtt, srt, ttml, srv3, srv2, srv1, json3
+gu       Gujarati              vtt, srt, ttml, srv3, srv2, srv1, json3
+ht       Haitian Creole        vtt, srt, ttml, srv3, srv2, srv1, json3
+ha       Hausa                 vtt, srt, ttml, srv3, srv2, srv1, json3
+haw      Hawaiian              vtt, srt, ttml, srv3, srv2, srv1, json3
+iw       Hebrew                vtt, srt, ttml, srv3, srv2, srv1, json3
+hi       Hindi                 vtt, srt, ttml, srv3, srv2, srv1, json3
+hmn      Hmong                 vtt, srt, ttml, srv3, srv2, srv1, json3
+hu       Hungarian             vtt, srt, ttml, srv3, srv2, srv1, json3
+is       Icelandic             vtt, srt, ttml, srv3, srv2, srv1, json3
+ig       Igbo                  vtt, srt, ttml, srv3, srv2, srv1, json3
+id       Indonesian            vtt, srt, ttml, srv3, srv2, srv1, json3
+iu       Inuktitut             vtt, srt, ttml, srv3, srv2, srv1, json3
+ga       Irish                 vtt, srt, ttml, srv3, srv2, srv1, json3
+it       Italian               vtt, srt, ttml, srv3, srv2, srv1, json3
+ja       Japanese              vtt, srt, ttml, srv3, srv2, srv1, json3
+jv       Javanese              vtt, srt, ttml, srv3, srv2, srv1, json3
+kl       Kalaallisut           vtt, srt, ttml, srv3, srv2, srv1, json3
+kn       Kannada               vtt, srt, ttml, srv3, srv2, srv1, json3
+kk       Kazakh                vtt, srt, ttml, srv3, srv2, srv1, json3
+kha      Khasi                 vtt, srt, ttml, srv3, srv2, srv1, json3
+km       Khmer                 vtt, srt, ttml, srv3, srv2, srv1, json3
+rw       Kinyarwanda           vtt, srt, ttml, srv3, srv2, srv1, json3
+ko       Korean                vtt, srt, ttml, srv3, srv2, srv1, json3
+kri      Krio                  vtt, srt, ttml, srv3, srv2, srv1, json3
+ku       Kurdish               vtt, srt, ttml, srv3, srv2, srv1, json3
+ky       Kyrgyz                vtt, srt, ttml, srv3, srv2, srv1, json3
+lo       Lao                   vtt, srt, ttml, srv3, srv2, srv1, json3
+la       Latin                 vtt, srt, ttml, srv3, srv2, srv1, json3
+lv       Latvian               vtt, srt, ttml, srv3, srv2, srv1, json3
+ln       Lingala               vtt, srt, ttml, srv3, srv2, srv1, json3
+lt       Lithuanian            vtt, srt, ttml, srv3, srv2, srv1, json3
+lua      Luba-Lulua            vtt, srt, ttml, srv3, srv2, srv1, json3
+luo      Luo                   vtt, srt, ttml, srv3, srv2, srv1, json3
+lb       Luxembourgish         vtt, srt, ttml, srv3, srv2, srv1, json3
+mk       Macedonian            vtt, srt, ttml, srv3, srv2, srv1, json3
+mg       Malagasy              vtt, srt, ttml, srv3, srv2, srv1, json3
+ms       Malay                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ml       Malayalam             vtt, srt, ttml, srv3, srv2, srv1, json3
+mt       Maltese               vtt, srt, ttml, srv3, srv2, srv1, json3
+gv       Manx                  vtt, srt, ttml, srv3, srv2, srv1, json3
+mi       Mori                 vtt, srt, ttml, srv3, srv2, srv1, json3
+mr       Marathi               vtt, srt, ttml, srv3, srv2, srv1, json3
+mn       Mongolian             vtt, srt, ttml, srv3, srv2, srv1, json3
+mfe      Morisyen              vtt, srt, ttml, srv3, srv2, srv1, json3
+ne       Nepali                vtt, srt, ttml, srv3, srv2, srv1, json3
+new      Newari                vtt, srt, ttml, srv3, srv2, srv1, json3
+nso      Northern Sotho        vtt, srt, ttml, srv3, srv2, srv1, json3
+no       Norwegian             vtt, srt, ttml, srv3, srv2, srv1, json3
+ny       Nyanja                vtt, srt, ttml, srv3, srv2, srv1, json3
+oc       Occitan               vtt, srt, ttml, srv3, srv2, srv1, json3
+or       Odia                  vtt, srt, ttml, srv3, srv2, srv1, json3
+om       Oromo                 vtt, srt, ttml, srv3, srv2, srv1, json3
+os       Ossetic               vtt, srt, ttml, srv3, srv2, srv1, json3
+pam      Pampanga              vtt, srt, ttml, srv3, srv2, srv1, json3
+ps       Pashto                vtt, srt, ttml, srv3, srv2, srv1, json3
+fa       Persian               vtt, srt, ttml, srv3, srv2, srv1, json3
+pl       Polish                vtt, srt, ttml, srv3, srv2, srv1, json3
+pt       Portuguese            vtt, srt, ttml, srv3, srv2, srv1, json3
+pt-PT    Portuguese (Portugal) vtt, srt, ttml, srv3, srv2, srv1, json3
+pa       Punjabi               vtt, srt, ttml, srv3, srv2, srv1, json3
+qu       Quechua               vtt, srt, ttml, srv3, srv2, srv1, json3
+ro       Romanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+rn       Rundi                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ru       Russian               vtt, srt, ttml, srv3, srv2, srv1, json3
+sm       Samoan                vtt, srt, ttml, srv3, srv2, srv1, json3
+sg       Sango                 vtt, srt, ttml, srv3, srv2, srv1, json3
+sa       Sanskrit              vtt, srt, ttml, srv3, srv2, srv1, json3
+gd       Scottish Gaelic       vtt, srt, ttml, srv3, srv2, srv1, json3
+sr       Serbian               vtt, srt, ttml, srv3, srv2, srv1, json3
+crs      Seselwa Creole French vtt, srt, ttml, srv3, srv2, srv1, json3
+sn       Shona                 vtt, srt, ttml, srv3, srv2, srv1, json3
+sd       Sindhi                vtt, srt, ttml, srv3, srv2, srv1, json3
+si       Sinhala               vtt, srt, ttml, srv3, srv2, srv1, json3
+sk       Slovak                vtt, srt, ttml, srv3, srv2, srv1, json3
+sl       Slovenian             vtt, srt, ttml, srv3, srv2, srv1, json3
+so       Somali                vtt, srt, ttml, srv3, srv2, srv1, json3
+st       Southern Sotho        vtt, srt, ttml, srv3, srv2, srv1, json3
+es       Spanish               vtt, srt, ttml, srv3, srv2, srv1, json3
+su       Sundanese             vtt, srt, ttml, srv3, srv2, srv1, json3
+sw       Swahili               vtt, srt, ttml, srv3, srv2, srv1, json3
+ss       Swati                 vtt, srt, ttml, srv3, srv2, srv1, json3
+sv       Swedish               vtt, srt, ttml, srv3, srv2, srv1, json3
+tg       Tajik                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ta       Tamil                 vtt, srt, ttml, srv3, srv2, srv1, json3
+tt       Tatar                 vtt, srt, ttml, srv3, srv2, srv1, json3
+te       Telugu                vtt, srt, ttml, srv3, srv2, srv1, json3
+th       Thai                  vtt, srt, ttml, srv3, srv2, srv1, json3
+bo       Tibetan               vtt, srt, ttml, srv3, srv2, srv1, json3
+ti       Tigrinya              vtt, srt, ttml, srv3, srv2, srv1, json3
+to       Tongan                vtt, srt, ttml, srv3, srv2, srv1, json3
+ts       Tsonga                vtt, srt, ttml, srv3, srv2, srv1, json3
+tn       Tswana                vtt, srt, ttml, srv3, srv2, srv1, json3
+tum      Tumbuka               vtt, srt, ttml, srv3, srv2, srv1, json3
+tr       Turkish               vtt, srt, ttml, srv3, srv2, srv1, json3
+tk       Turkmen               vtt, srt, ttml, srv3, srv2, srv1, json3
+uk       Ukrainian             vtt, srt, ttml, srv3, srv2, srv1, json3
+ur       Urdu                  vtt, srt, ttml, srv3, srv2, srv1, json3
+ug       Uyghur                vtt, srt, ttml, srv3, srv2, srv1, json3
+uz       Uzbek                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ve       Venda                 vtt, srt, ttml, srv3, srv2, srv1, json3
+vi       Vietnamese            vtt, srt, ttml, srv3, srv2, srv1, json3
+war      Waray                 vtt, srt, ttml, srv3, srv2, srv1, json3
+cy       Welsh                 vtt, srt, ttml, srv3, srv2, srv1, json3
+fy       Western Frisian       vtt, srt, ttml, srv3, srv2, srv1, json3
+wo       Wolof                 vtt, srt, ttml, srv3, srv2, srv1, json3
+xh       Xhosa                 vtt, srt, ttml, srv3, srv2, srv1, json3
+yi       Yiddish               vtt, srt, ttml, srv3, srv2, srv1, json3
+yo       Yoruba                vtt, srt, ttml, srv3, srv2, srv1, json3
+zu       Zulu                  vtt, srt, ttml, srv3, srv2, srv1, json3
+9KYABy_KgEM has no subtitles
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9KYABy_KgEM
+[youtube] 9KYABy_KgEM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading tv player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading ios player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading m3u8 information
+[info] 9KYABy_KgEM: Downloading subtitles: ar
+WARNING: ffmpeg not found. The downloaded format may not be the best available. Installing ffmpeg is strongly recommended: https://github.com/yt-dlp/yt-dlp#dependencies
+[info] 9KYABy_KgEM: Downloading 1 format(s): 18
+[info] Writing video subtitles to: assets\subtitles.ar.vtt
+ERROR: Unable to download video subtitles for 'ar': HTTP Error 429: Too Many Requests
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9KYABy_KgEM
+[youtube] 9KYABy_KgEM: Downloading webpage
+[youtube] 9KYABy_KgEM: Downloading tv client config
+[youtube] 9KYABy_KgEM: Downloading tv player API JSON
+[youtube] 9KYABy_KgEM: Downloading ios player API JSON
+[youtube] 9KYABy_KgEM: Downloading m3u8 information
+[info] Available automatic captions for 9KYABy_KgEM:
+Language Name                  Formats
+ab       Abkhazian             vtt, srt, ttml, srv3, srv2, srv1, json3
+aa       Afar                  vtt, srt, ttml, srv3, srv2, srv1, json3
+af       Afrikaans             vtt, srt, ttml, srv3, srv2, srv1, json3
+ak       Akan                  vtt, srt, ttml, srv3, srv2, srv1, json3
+sq       Albanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+am       Amharic               vtt, srt, ttml, srv3, srv2, srv1, json3
+ar       Arabic                vtt, srt, ttml, srv3, srv2, srv1, json3
+hy       Armenian              vtt, srt, ttml, srv3, srv2, srv1, json3
+as       Assamese              vtt, srt, ttml, srv3, srv2, srv1, json3
+ay       Aymara                vtt, srt, ttml, srv3, srv2, srv1, json3
+az       Azerbaijani           vtt, srt, ttml, srv3, srv2, srv1, json3
+bn       Bangla                vtt, srt, ttml, srv3, srv2, srv1, json3
+ba       Bashkir               vtt, srt, ttml, srv3, srv2, srv1, json3
+eu       Basque                vtt, srt, ttml, srv3, srv2, srv1, json3
+be       Belarusian            vtt, srt, ttml, srv3, srv2, srv1, json3
+bho      Bhojpuri              vtt, srt, ttml, srv3, srv2, srv1, json3
+bs       Bosnian               vtt, srt, ttml, srv3, srv2, srv1, json3
+br       Breton                vtt, srt, ttml, srv3, srv2, srv1, json3
+bg       Bulgarian             vtt, srt, ttml, srv3, srv2, srv1, json3
+my       Burmese               vtt, srt, ttml, srv3, srv2, srv1, json3
+ca       Catalan               vtt, srt, ttml, srv3, srv2, srv1, json3
+ceb      Cebuano               vtt, srt, ttml, srv3, srv2, srv1, json3
+zh-Hans  Chinese (Simplified)  vtt, srt, ttml, srv3, srv2, srv1, json3
+zh-Hant  Chinese (Traditional) vtt, srt, ttml, srv3, srv2, srv1, json3
+co       Corsican              vtt, srt, ttml, srv3, srv2, srv1, json3
+hr       Croatian              vtt, srt, ttml, srv3, srv2, srv1, json3
+cs       Czech                 vtt, srt, ttml, srv3, srv2, srv1, json3
+da       Danish                vtt, srt, ttml, srv3, srv2, srv1, json3
+dv       Divehi                vtt, srt, ttml, srv3, srv2, srv1, json3
+nl       Dutch                 vtt, srt, ttml, srv3, srv2, srv1, json3
+dz       Dzongkha              vtt, srt, ttml, srv3, srv2, srv1, json3
+en       English               vtt, srt, ttml, srv3, srv2, srv1, json3
+eo       Esperanto             vtt, srt, ttml, srv3, srv2, srv1, json3
+et       Estonian              vtt, srt, ttml, srv3, srv2, srv1, json3
+ee       Ewe                   vtt, srt, ttml, srv3, srv2, srv1, json3
+fo       Faroese               vtt, srt, ttml, srv3, srv2, srv1, json3
+fj       Fijian                vtt, srt, ttml, srv3, srv2, srv1, json3
+fil      Filipino              vtt, srt, ttml, srv3, srv2, srv1, json3
+fi       Finnish               vtt, srt, ttml, srv3, srv2, srv1, json3
+fr       French                vtt, srt, ttml, srv3, srv2, srv1, json3
+gaa      Ga                    vtt, srt, ttml, srv3, srv2, srv1, json3
+gl       Galician              vtt, srt, ttml, srv3, srv2, srv1, json3
+lg       Ganda                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ka       Georgian              vtt, srt, ttml, srv3, srv2, srv1, json3
+de-orig  German (Original)     vtt, srt, ttml, srv3, srv2, srv1, json3
+de       German                vtt, srt, ttml, srv3, srv2, srv1, json3
+el       Greek                 vtt, srt, ttml, srv3, srv2, srv1, json3
+gn       Guarani               vtt, srt, ttml, srv3, srv2, srv1, json3
+gu       Gujarati              vtt, srt, ttml, srv3, srv2, srv1, json3
+ht       Haitian Creole        vtt, srt, ttml, srv3, srv2, srv1, json3
+ha       Hausa                 vtt, srt, ttml, srv3, srv2, srv1, json3
+haw      Hawaiian              vtt, srt, ttml, srv3, srv2, srv1, json3
+iw       Hebrew                vtt, srt, ttml, srv3, srv2, srv1, json3
+hi       Hindi                 vtt, srt, ttml, srv3, srv2, srv1, json3
+hmn      Hmong                 vtt, srt, ttml, srv3, srv2, srv1, json3
+hu       Hungarian             vtt, srt, ttml, srv3, srv2, srv1, json3
+is       Icelandic             vtt, srt, ttml, srv3, srv2, srv1, json3
+ig       Igbo                  vtt, srt, ttml, srv3, srv2, srv1, json3
+id       Indonesian            vtt, srt, ttml, srv3, srv2, srv1, json3
+iu       Inuktitut             vtt, srt, ttml, srv3, srv2, srv1, json3
+ga       Irish                 vtt, srt, ttml, srv3, srv2, srv1, json3
+it       Italian               vtt, srt, ttml, srv3, srv2, srv1, json3
+ja       Japanese              vtt, srt, ttml, srv3, srv2, srv1, json3
+jv       Javanese              vtt, srt, ttml, srv3, srv2, srv1, json3
+kl       Kalaallisut           vtt, srt, ttml, srv3, srv2, srv1, json3
+kn       Kannada               vtt, srt, ttml, srv3, srv2, srv1, json3
+kk       Kazakh                vtt, srt, ttml, srv3, srv2, srv1, json3
+kha      Khasi                 vtt, srt, ttml, srv3, srv2, srv1, json3
+km       Khmer                 vtt, srt, ttml, srv3, srv2, srv1, json3
+rw       Kinyarwanda           vtt, srt, ttml, srv3, srv2, srv1, json3
+ko       Korean                vtt, srt, ttml, srv3, srv2, srv1, json3
+kri      Krio                  vtt, srt, ttml, srv3, srv2, srv1, json3
+ku       Kurdish               vtt, srt, ttml, srv3, srv2, srv1, json3
+ky       Kyrgyz                vtt, srt, ttml, srv3, srv2, srv1, json3
+lo       Lao                   vtt, srt, ttml, srv3, srv2, srv1, json3
+la       Latin                 vtt, srt, ttml, srv3, srv2, srv1, json3
+lv       Latvian               vtt, srt, ttml, srv3, srv2, srv1, json3
+ln       Lingala               vtt, srt, ttml, srv3, srv2, srv1, json3
+lt       Lithuanian            vtt, srt, ttml, srv3, srv2, srv1, json3
+lua      Luba-Lulua            vtt, srt, ttml, srv3, srv2, srv1, json3
+luo      Luo                   vtt, srt, ttml, srv3, srv2, srv1, json3
+lb       Luxembourgish         vtt, srt, ttml, srv3, srv2, srv1, json3
+mk       Macedonian            vtt, srt, ttml, srv3, srv2, srv1, json3
+mg       Malagasy              vtt, srt, ttml, srv3, srv2, srv1, json3
+ms       Malay                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ml       Malayalam             vtt, srt, ttml, srv3, srv2, srv1, json3
+mt       Maltese               vtt, srt, ttml, srv3, srv2, srv1, json3
+gv       Manx                  vtt, srt, ttml, srv3, srv2, srv1, json3
+mi       Mori                 vtt, srt, ttml, srv3, srv2, srv1, json3
+mr       Marathi               vtt, srt, ttml, srv3, srv2, srv1, json3
+mn       Mongolian             vtt, srt, ttml, srv3, srv2, srv1, json3
+mfe      Morisyen              vtt, srt, ttml, srv3, srv2, srv1, json3
+ne       Nepali                vtt, srt, ttml, srv3, srv2, srv1, json3
+new      Newari                vtt, srt, ttml, srv3, srv2, srv1, json3
+nso      Northern Sotho        vtt, srt, ttml, srv3, srv2, srv1, json3
+no       Norwegian             vtt, srt, ttml, srv3, srv2, srv1, json3
+ny       Nyanja                vtt, srt, ttml, srv3, srv2, srv1, json3
+oc       Occitan               vtt, srt, ttml, srv3, srv2, srv1, json3
+or       Odia                  vtt, srt, ttml, srv3, srv2, srv1, json3
+om       Oromo                 vtt, srt, ttml, srv3, srv2, srv1, json3
+os       Ossetic               vtt, srt, ttml, srv3, srv2, srv1, json3
+pam      Pampanga              vtt, srt, ttml, srv3, srv2, srv1, json3
+ps       Pashto                vtt, srt, ttml, srv3, srv2, srv1, json3
+fa       Persian               vtt, srt, ttml, srv3, srv2, srv1, json3
+pl       Polish                vtt, srt, ttml, srv3, srv2, srv1, json3
+pt       Portuguese            vtt, srt, ttml, srv3, srv2, srv1, json3
+pt-PT    Portuguese (Portugal) vtt, srt, ttml, srv3, srv2, srv1, json3
+pa       Punjabi               vtt, srt, ttml, srv3, srv2, srv1, json3
+qu       Quechua               vtt, srt, ttml, srv3, srv2, srv1, json3
+ro       Romanian              vtt, srt, ttml, srv3, srv2, srv1, json3
+rn       Rundi                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ru       Russian               vtt, srt, ttml, srv3, srv2, srv1, json3
+sm       Samoan                vtt, srt, ttml, srv3, srv2, srv1, json3
+sg       Sango                 vtt, srt, ttml, srv3, srv2, srv1, json3
+sa       Sanskrit              vtt, srt, ttml, srv3, srv2, srv1, json3
+gd       Scottish Gaelic       vtt, srt, ttml, srv3, srv2, srv1, json3
+sr       Serbian               vtt, srt, ttml, srv3, srv2, srv1, json3
+crs      Seselwa Creole French vtt, srt, ttml, srv3, srv2, srv1, json3
+sn       Shona                 vtt, srt, ttml, srv3, srv2, srv1, json3
+sd       Sindhi                vtt, srt, ttml, srv3, srv2, srv1, json3
+si       Sinhala               vtt, srt, ttml, srv3, srv2, srv1, json3
+sk       Slovak                vtt, srt, ttml, srv3, srv2, srv1, json3
+sl       Slovenian             vtt, srt, ttml, srv3, srv2, srv1, json3
+so       Somali                vtt, srt, ttml, srv3, srv2, srv1, json3
+st       Southern Sotho        vtt, srt, ttml, srv3, srv2, srv1, json3
+es       Spanish               vtt, srt, ttml, srv3, srv2, srv1, json3
+su       Sundanese             vtt, srt, ttml, srv3, srv2, srv1, json3
+sw       Swahili               vtt, srt, ttml, srv3, srv2, srv1, json3
+ss       Swati                 vtt, srt, ttml, srv3, srv2, srv1, json3
+sv       Swedish               vtt, srt, ttml, srv3, srv2, srv1, json3
+tg       Tajik                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ta       Tamil                 vtt, srt, ttml, srv3, srv2, srv1, json3
+tt       Tatar                 vtt, srt, ttml, srv3, srv2, srv1, json3
+te       Telugu                vtt, srt, ttml, srv3, srv2, srv1, json3
+th       Thai                  vtt, srt, ttml, srv3, srv2, srv1, json3
+bo       Tibetan               vtt, srt, ttml, srv3, srv2, srv1, json3
+ti       Tigrinya              vtt, srt, ttml, srv3, srv2, srv1, json3
+to       Tongan                vtt, srt, ttml, srv3, srv2, srv1, json3
+ts       Tsonga                vtt, srt, ttml, srv3, srv2, srv1, json3
+tn       Tswana                vtt, srt, ttml, srv3, srv2, srv1, json3
+tum      Tumbuka               vtt, srt, ttml, srv3, srv2, srv1, json3
+tr       Turkish               vtt, srt, ttml, srv3, srv2, srv1, json3
+tk       Turkmen               vtt, srt, ttml, srv3, srv2, srv1, json3
+uk       Ukrainian             vtt, srt, ttml, srv3, srv2, srv1, json3
+ur       Urdu                  vtt, srt, ttml, srv3, srv2, srv1, json3
+ug       Uyghur                vtt, srt, ttml, srv3, srv2, srv1, json3
+uz       Uzbek                 vtt, srt, ttml, srv3, srv2, srv1, json3
+ve       Venda                 vtt, srt, ttml, srv3, srv2, srv1, json3
+vi       Vietnamese            vtt, srt, ttml, srv3, srv2, srv1, json3
+war      Waray                 vtt, srt, ttml, srv3, srv2, srv1, json3
+cy       Welsh                 vtt, srt, ttml, srv3, srv2, srv1, json3
+fy       Western Frisian       vtt, srt, ttml, srv3, srv2, srv1, json3
+wo       Wolof                 vtt, srt, ttml, srv3, srv2, srv1, json3
+xh       Xhosa                 vtt, srt, ttml, srv3, srv2, srv1, json3
+yi       Yiddish               vtt, srt, ttml, srv3, srv2, srv1, json3
+yo       Yoruba                vtt, srt, ttml, srv3, srv2, srv1, json3
+zu       Zulu                  vtt, srt, ttml, srv3, srv2, srv1, json3
+9KYABy_KgEM has no subtitles
+[youtube] Extracting URL: https://www.youtube.com/watch?v=9KYABy_KgEM
+[youtube] 9KYABy_KgEM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading tv player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading ios player API JSON
+WARNING: [youtube] 9KYABy_KgEM: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 9KYABy_KgEM: Downloading m3u8 information
+[info] 9KYABy_KgEM: Downloading subtitles: en
+[info] Testing format 614
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 614. Skipping...
+[info] Testing format 270
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 270. Skipping...
+[info] Testing format 609
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+[info] Testing format 232
+WARNING: Unable to download format 609. Skipping...
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 232. Skipping...
+[info] Testing format 606
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 606. Skipping...
+[info] Testing format 231
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 231. Skipping...
+[info] Testing format 605
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 605. Skipping...
+[info] Testing format 234
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 234. Skipping...
+[info] Testing format 233
+ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: fragment 1 not found, unable to continue
+WARNING: Unable to download format 233. Skipping...
+[info] 9KYABy_KgEM: Downloading 1 format(s): 18
+[info] Writing video subtitles to: assets\subtitles.en.vtt
+ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests
