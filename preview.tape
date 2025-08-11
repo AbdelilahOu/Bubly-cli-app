@@ -21,7 +21,13 @@ Type "go run main.go"
 Enter
 
 # Wait for the app to start
-Sleep 3s
+Sleep 2s
+
+# Download ytdlp
+Enter
+
+# Wait for ytdlp to download
+Sleep 5s
 
 # Navigate to "Download Youtube video" option and select it
 Down

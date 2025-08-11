@@ -2,9 +2,9 @@ name: Generate Demo GIF
 
 on:
   push:
-    branches: [preview]
+    branches: [main]
   pull_request:
-    branches: [preview]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
