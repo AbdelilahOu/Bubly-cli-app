@@ -19,36 +19,44 @@ WARNING: [youtube] _7JsfHTyqiw: Some web client https formats have been skipped 
 [youtube] Sleeping 1.0 seconds ...
 [youtube] _7JsfHTyqiw: Downloading m3u8 information
 [info] Testing format 628
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 [info] Testing format 623
 WARNING: Unable to download format 628. Skipping...
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 623. Skipping...
 [info] Testing format 617
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 617. Skipping...
 [info] Testing format 312
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 312. Skipping...
 [info] Testing format 612
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 612. Skipping...
 [info] Testing format 311
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 311. Skipping...
 [info] Testing format 606
 [info] Testing format 234
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 234. Skipping...
 [info] Testing format 233
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 233. Skipping...
 [info] _7JsfHTyqiw: Downloading 1 format(s): 18
@@ -602,41 +610,269 @@ WARNING: [youtube] 9KYABy_KgEM: Some web client https formats have been skipped 
 [youtube] 9KYABy_KgEM: Downloading m3u8 information
 [info] 9KYABy_KgEM: Downloading subtitles: en
 [info] Testing format 614
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 614. Skipping...
 [info] Testing format 270
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 270. Skipping...
 [info] Testing format 609
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 [info] Testing format 232
 WARNING: Unable to download format 609. Skipping...
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 232. Skipping...
 [info] Testing format 606
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 606. Skipping...
 [info] Testing format 231
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 231. Skipping...
 [info] Testing format 605
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 605. Skipping...
 [info] Testing format 234
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 234. Skipping...
 [info] Testing format 233
-ERROR: [download] Got error: HTTP Error 403: Forbidden
+ERROR: 
+[download] Got error: HTTP Error 403: Forbidden
 ERROR: fragment 1 not found, unable to continue
 WARNING: Unable to download format 233. Skipping...
 [info] 9KYABy_KgEM: Downloading 1 format(s): 18
 [info] Writing video subtitles to: assets\subtitles.en.vtt
 ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Available formats for Vspc3ViP2G4:
+ID      EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+-------------------------------------------------------------------------------------------------------------------------------
+sb3     mhtml 48x27        0    |                  mhtml | images                                  storyboard
+sb2     mhtml 80x45        0    |                  mhtml | images                                  storyboard
+sb1     mhtml 160x90       0    |                  mhtml | images                                  storyboard
+sb0     mhtml 320x180      0    |                  mhtml | images                                  storyboard
+233     mp4   audio only        |                  m3u8  | audio only          unknown             [en] Untested, Default, low
+234     mp4   audio only        |                  m3u8  | audio only          unknown             [en] Untested, Default, high
+249-drc webm  audio only      2 |    7.33MiB   50k https | audio only          opus        50k 48k [en] low, DRC, webm_dash
+250-drc webm  audio only      2 |   11.13MiB   76k https | audio only          opus        76k 48k [en] low, DRC, webm_dash
+249     webm  audio only      2 |    7.29MiB   50k https | audio only          opus        50k 48k [en] low, webm_dash
+250     webm  audio only      2 |   11.11MiB   76k https | audio only          opus        76k 48k [en] low, webm_dash
+140-drc m4a   audio only      2 |   18.91MiB  129k https | audio only          mp4a.40.2  129k 44k [en] medium, DRC, m4a_dash
+251-drc webm  audio only      2 |   20.26MiB  139k https | audio only          opus       139k 48k [en] medium, DRC, webm_dash
+140     m4a   audio only      2 |   18.91MiB  129k https | audio only          mp4a.40.2  129k 44k [en] medium, m4a_dash
+251     webm  audio only      2 |   20.21MiB  138k https | audio only          opus       138k 48k [en] medium, webm_dash
+602     mp4   256x144     15    | ~ 11.99MiB   82k m3u8  | vp09.00.10.08   82k video only          Untested
+269     mp4   256x144     30    | ~ 13.19MiB   90k m3u8  | avc1.4D400C     90k video only          Untested
+160     mp4   256x144     30    |    2.20MiB   15k https | avc1.4d400c     15k video only          144p, mp4_dash
+603     mp4   256x144     30    | ~ 20.89MiB  143k m3u8  | vp09.00.11.08  143k video only          Untested
+278     webm  256x144     30    |    4.87MiB   33k https | vp9             33k video only          144p, webm_dash
+394     mp4   256x144     30    |    3.04MiB   21k https | av01.0.00M.08   21k video only          144p, mp4_dash
+229     mp4   426x240     30    | ~ 20.69MiB  142k m3u8  | avc1.4D4015    142k video only          Untested
+133     mp4   426x240     30    |    3.95MiB   27k https | avc1.4d4015     27k video only          240p, mp4_dash
+604     mp4   426x240     30    | ~ 28.68MiB  196k m3u8  | vp09.00.20.08  196k video only          Untested
+242     webm  426x240     30    |    5.69MiB   39k https | vp9             39k video only          240p, webm_dash
+395     mp4   426x240     30    |    4.89MiB   33k https | av01.0.00M.08   33k video only          240p, mp4_dash
+230     mp4   640x360     30    | ~ 46.11MiB  316k m3u8  | avc1.4D401E    316k video only          Untested
+134     mp4   640x360     30    |    6.64MiB   45k https | avc1.4d401e     45k video only          360p, mp4_dash
+18      mp4   640x360     30  2 |   35.91MiB  246k https | avc1.42001E         mp4a.40.2       44k [en] 360p
+605     mp4   640x360     30    | ~ 54.76MiB  375k m3u8  | vp09.00.21.08  375k video only          Untested
+243     webm  640x360     30    |   11.35MiB   78k https | vp9             78k video only          360p, webm_dash
+396     mp4   640x360     30    |    8.43MiB   58k https | av01.0.01M.08   58k video only          360p, mp4_dash
+231     mp4   854x480     30    | ~ 62.63MiB  429k m3u8  | avc1.4D401F    429k video only          Untested
+135     mp4   854x480     30    |    9.87MiB   68k https | avc1.4d401f     68k video only          480p, mp4_dash
+606     mp4   854x480     30    | ~ 75.92MiB  520k m3u8  | vp09.00.30.08  520k video only          Untested
+244     webm  854x480     30    |   16.81MiB  115k https | vp9            115k video only          480p, webm_dash
+397     mp4   854x480     30    |   13.07MiB   89k https | av01.0.04M.08   89k video only          480p, mp4_dash
+232     mp4   1280x720    30    | ~ 82.72MiB  566k m3u8  | avc1.4D401F    566k video only          Untested
+136     mp4   1280x720    30    |   13.87MiB   95k https | avc1.4d401f     95k video only          720p, mp4_dash
+609     mp4   1280x720    30    | ~104.69MiB  717k m3u8  | vp09.00.31.08  717k video only          Untested
+247     webm  1280x720    30    |   29.08MiB  199k https | vp9            199k video only          720p, webm_dash
+398     mp4   1280x720    30    |   22.02MiB  151k https | av01.0.05M.08  151k video only          720p, mp4_dash
+270     mp4   1920x1080   30    | ~255.91MiB 1752k m3u8  | avc1.640028   1752k video only          Untested
+137     mp4   1920x1080   30    |   40.26MiB  276k https | avc1.640028    276k video only          1080p, mp4_dash
+614     mp4   1920x1080   30    | ~159.19MiB 1090k m3u8  | vp09.00.40.08 1090k video only          Untested
+248     webm  1920x1080   30    |   46.59MiB  319k https | vp9            319k video only          1080p, webm_dash
+399     mp4   1920x1080   30    |   34.05MiB  233k https | av01.0.08M.08  233k video only          1080p, mp4_dash
+620     mp4   2560x1440   30    | ~394.57MiB 2702k m3u8  | vp09.00.50.08 2702k video only          Untested
+271     webm  2560x1440   30    |  122.38MiB  838k https | vp9            838k video only          1440p, webm_dash
+400     mp4   2560x1440   30    |   66.33MiB  454k https | av01.0.12M.08  454k video only          1440p, mp4_dash
+625     mp4   3840x2160   30    | ~  1.35GiB 9441k m3u8  | vp09.00.50.08 9441k video only          Untested
+313     webm  3840x2160   30    |  435.00MiB 2978k https | vp9           2978k video only          2160p, webm_dash
+401     mp4   3840x2160   30    |  112.54MiB  771k https | av01.0.12M.08  771k video only          2160p, mp4_dash
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+WARNING: [youtube] Vspc3ViP2G4: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Available formats for Vspc3ViP2G4:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC     ASR MORE INFO
+----------------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                             storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                             storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                             storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                             storyboard
+233 mp4   audio only        |                  m3u8  | audio only          unknown        [en] Untested, Default, low
+234 mp4   audio only        |                  m3u8  | audio only          unknown        [en] Untested, Default, high
+602 mp4   256x144     15    | ~ 11.99MiB   82k m3u8  | vp09.00.10.08   82k video only     Untested
+269 mp4   256x144     30    | ~ 13.19MiB   90k m3u8  | avc1.4D400C     90k video only     Untested
+603 mp4   256x144     30    | ~ 20.89MiB  143k m3u8  | vp09.00.11.08  143k video only     Untested
+229 mp4   426x240     30    | ~ 20.69MiB  142k m3u8  | avc1.4D4015    142k video only     Untested
+604 mp4   426x240     30    | ~ 28.68MiB  196k m3u8  | vp09.00.20.08  196k video only     Untested
+230 mp4   640x360     30    | ~ 46.11MiB  316k m3u8  | avc1.4D401E    316k video only     Untested
+18  mp4   640x360     30  2 |   35.91MiB  246k https | avc1.42001E         mp4a.40.2  44k [en] 360p
+605 mp4   640x360     30    | ~ 54.76MiB  375k m3u8  | vp09.00.21.08  375k video only     Untested
+231 mp4   854x480     30    | ~ 62.63MiB  429k m3u8  | avc1.4D401F    429k video only     Untested
+606 mp4   854x480     30    | ~ 75.92MiB  520k m3u8  | vp09.00.30.08  520k video only     Untested
+232 mp4   1280x720    30    | ~ 82.72MiB  566k m3u8  | avc1.4D401F    566k video only     Untested
+609 mp4   1280x720    30    | ~104.69MiB  717k m3u8  | vp09.00.31.08  717k video only     Untested
+270 mp4   1920x1080   30    | ~255.91MiB 1752k m3u8  | avc1.640028   1752k video only     Untested
+614 mp4   1920x1080   30    | ~159.19MiB 1090k m3u8  | vp09.00.40.08 1090k video only     Untested
+620 mp4   2560x1440   30    | ~394.57MiB 2702k m3u8  | vp09.00.50.08 2702k video only     Untested
+625 mp4   3840x2160   30    | ~  1.35GiB 9441k m3u8  | vp09.00.50.08 9441k video only     Untested
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Testing format 233
+[info] Vspc3ViP2G4: Downloading 1 format(s): 233
+[download] assets\audio.mp4 has already been downloaded
+
+[download] 100% of   22.35MiB
+ERROR: Postprocessing: ffprobe and ffmpeg not found. Please install or provide the path using --ffmpeg-location
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Available formats for Vspc3ViP2G4:
+ID      EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+-------------------------------------------------------------------------------------------------------------------------------
+sb3     mhtml 48x27        0    |                  mhtml | images                                  storyboard
+sb2     mhtml 80x45        0    |                  mhtml | images                                  storyboard
+sb1     mhtml 160x90       0    |                  mhtml | images                                  storyboard
+sb0     mhtml 320x180      0    |                  mhtml | images                                  storyboard
+233     mp4   audio only        |                  m3u8  | audio only          unknown             [en] Untested, Default, low
+234     mp4   audio only        |                  m3u8  | audio only          unknown             [en] Untested, Default, high
+249-drc webm  audio only      2 |    7.33MiB   50k https | audio only          opus        50k 48k [en] low, DRC, webm_dash
+250-drc webm  audio only      2 |   11.13MiB   76k https | audio only          opus        76k 48k [en] low, DRC, webm_dash
+249     webm  audio only      2 |    7.29MiB   50k https | audio only          opus        50k 48k [en] low, webm_dash
+250     webm  audio only      2 |   11.11MiB   76k https | audio only          opus        76k 48k [en] low, webm_dash
+140-drc m4a   audio only      2 |   18.91MiB  129k https | audio only          mp4a.40.2  129k 44k [en] medium, DRC, m4a_dash
+251-drc webm  audio only      2 |   20.26MiB  139k https | audio only          opus       139k 48k [en] medium, DRC, webm_dash
+140     m4a   audio only      2 |   18.91MiB  129k https | audio only          mp4a.40.2  129k 44k [en] medium, m4a_dash
+251     webm  audio only      2 |   20.21MiB  138k https | audio only          opus       138k 48k [en] medium, webm_dash
+602     mp4   256x144     15    | ~ 11.99MiB   82k m3u8  | vp09.00.10.08   82k video only          Untested
+269     mp4   256x144     30    | ~ 13.19MiB   90k m3u8  | avc1.4D400C     90k video only          Untested
+160     mp4   256x144     30    |    2.20MiB   15k https | avc1.4d400c     15k video only          144p, mp4_dash
+603     mp4   256x144     30    | ~ 20.89MiB  143k m3u8  | vp09.00.11.08  143k video only          Untested
+278     webm  256x144     30    |    4.87MiB   33k https | vp9             33k video only          144p, webm_dash
+394     mp4   256x144     30    |    3.04MiB   21k https | av01.0.00M.08   21k video only          144p, mp4_dash
+229     mp4   426x240     30    | ~ 20.69MiB  142k m3u8  | avc1.4D4015    142k video only          Untested
+133     mp4   426x240     30    |    3.95MiB   27k https | avc1.4d4015     27k video only          240p, mp4_dash
+604     mp4   426x240     30    | ~ 28.68MiB  196k m3u8  | vp09.00.20.08  196k video only          Untested
+242     webm  426x240     30    |    5.69MiB   39k https | vp9             39k video only          240p, webm_dash
+395     mp4   426x240     30    |    4.89MiB   33k https | av01.0.00M.08   33k video only          240p, mp4_dash
+230     mp4   640x360     30    | ~ 46.11MiB  316k m3u8  | avc1.4D401E    316k video only          Untested
+134     mp4   640x360     30    |    6.64MiB   45k https | avc1.4d401e     45k video only          360p, mp4_dash
+18      mp4   640x360     30  2 |   35.91MiB  246k https | avc1.42001E         mp4a.40.2       44k [en] 360p
+605     mp4   640x360     30    | ~ 54.76MiB  375k m3u8  | vp09.00.21.08  375k video only          Untested
+243     webm  640x360     30    |   11.35MiB   78k https | vp9             78k video only          360p, webm_dash
+396     mp4   640x360     30    |    8.43MiB   58k https | av01.0.01M.08   58k video only          360p, mp4_dash
+231     mp4   854x480     30    | ~ 62.63MiB  429k m3u8  | avc1.4D401F    429k video only          Untested
+135     mp4   854x480     30    |    9.87MiB   68k https | avc1.4d401f     68k video only          480p, mp4_dash
+606     mp4   854x480     30    | ~ 75.92MiB  520k m3u8  | vp09.00.30.08  520k video only          Untested
+244     webm  854x480     30    |   16.81MiB  115k https | vp9            115k video only          480p, webm_dash
+397     mp4   854x480     30    |   13.07MiB   89k https | av01.0.04M.08   89k video only          480p, mp4_dash
+232     mp4   1280x720    30    | ~ 82.72MiB  566k m3u8  | avc1.4D401F    566k video only          Untested
+136     mp4   1280x720    30    |   13.87MiB   95k https | avc1.4d401f     95k video only          720p, mp4_dash
+609     mp4   1280x720    30    | ~104.69MiB  717k m3u8  | vp09.00.31.08  717k video only          Untested
+247     webm  1280x720    30    |   29.08MiB  199k https | vp9            199k video only          720p, webm_dash
+398     mp4   1280x720    30    |   22.02MiB  151k https | av01.0.05M.08  151k video only          720p, mp4_dash
+270     mp4   1920x1080   30    | ~255.91MiB 1752k m3u8  | avc1.640028   1752k video only          Untested
+137     mp4   1920x1080   30    |   40.26MiB  276k https | avc1.640028    276k video only          1080p, mp4_dash
+614     mp4   1920x1080   30    | ~159.19MiB 1090k m3u8  | vp09.00.40.08 1090k video only          Untested
+248     webm  1920x1080   30    |   46.59MiB  319k https | vp9            319k video only          1080p, webm_dash
+399     mp4   1920x1080   30    |   34.05MiB  233k https | av01.0.08M.08  233k video only          1080p, mp4_dash
+620     mp4   2560x1440   30    | ~394.57MiB 2702k m3u8  | vp09.00.50.08 2702k video only          Untested
+271     webm  2560x1440   30    |  122.38MiB  838k https | vp9            838k video only          1440p, webm_dash
+400     mp4   2560x1440   30    |   66.33MiB  454k https | av01.0.12M.08  454k video only          1440p, mp4_dash
+625     mp4   3840x2160   30    | ~  1.35GiB 9441k m3u8  | vp09.00.50.08 9441k video only          Untested
+313     webm  3840x2160   30    |  435.00MiB 2978k https | vp9           2978k video only          2160p, webm_dash
+401     mp4   3840x2160   30    |  112.54MiB  771k https | av01.0.12M.08  771k video only          2160p, mp4_dash
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Vspc3ViP2G4: Downloading 1 format(s): 244
+[download] Sleeping 5.47 seconds ...
+[download] Destination: assets\video.webm
+
+[download]   0.0% of   16.81MiB at   69.47KiB/s ETA 04:07
+[download]   0.0% of   16.81MiB at  159.66KiB/s ETA 01:47
+[download]   0.0% of   16.81MiB at  323.96KiB/s ETA 00:53
+[download]   0.1% of   16.81MiB at  618.49KiB/s ETA 00:27
+[download]   0.2% of   16.81MiB at    1.06MiB/s ETA 00:15
+[download]   0.4% of   16.81MiB at    1.74MiB/s ETA 00:09
+[download]   0.7% of   16.81MiB at    2.39MiB/s ETA 00:06
+[download]   1.5% of   16.81MiB at    1.88MiB/s ETA 00:08
+[download]   3.0% of   16.81MiB at    1.98MiB/s ETA 00:08
+[download]   5.9% of   16.81MiB at    1.36MiB/s ETA 00:11
+[download]  11.9% of   16.81MiB at    1.58MiB/s ETA 00:09
+[download]  23.1% of   16.81MiB at    1.70MiB/s ETA 00:07
+[download]  34.2% of   16.81MiB at    1.52MiB/s ETA 00:07
+[download]  41.6% of   16.81MiB at    1.37MiB/s ETA 00:07
+[download]  47.1% of   16.81MiB at    1.43MiB/s ETA 00:06
+[download]  58.2% of   16.81MiB at    1.41MiB/s ETA 00:04
+[download]  59.1% of   16.81MiB at    1.42MiB/s ETA 00:04
+[download]  59.1% of   16.81MiB at   58.65KiB/s ETA 02:00
+[download]  59.1% of   16.81MiB at  121.69KiB/s ETA 00:57
+[download]  59.1% of   16.81MiB at  248.81KiB/s ETA 00:28
+[download]  59.2% of   16.81MiB at  469.74KiB/s ETA 00:14
+[download]  59.3% of   16.81MiB at  839.83KiB/s ETA 00:08
+[download]  59.4% of   16.81MiB at    1.48MiB/s ETA 00:04
+[download]  59.8% of   16.81MiB at    1.80MiB/s ETA 00:03
+[download]  60.6% of   16.81MiB at    2.00MiB/s ETA 00:03
+[download]  62.0% of   16.81MiB at    1.97MiB/s ETA 00:03
+[download]  65.0% of   16.81MiB at    1.96MiB/s ETA 00:03
+[download]  71.0% of   16.81MiB at    1.29MiB/s ETA 00:03
+[download]  76.7% of   16.81MiB at    1.02MiB/s ETA 00:03
+[download]  80.9% of   16.81MiB at    1.06MiB/s ETA 00:03
+[download]  88.2% of   16.81MiB at  915.91KiB/s ETA 00:02
+[download]  91.8% of   16.81MiB at  948.74KiB/s ETA 00:01
+[download]  99.1% of   16.81MiB at 1001.51KiB/s ETA 00:00
+[download] 100.0% of   16.81MiB at 1012.86KiB/s ETA 00:00
+[download] 100% of   16.81MiB in 00:00:15 at 1.12MiB/s   

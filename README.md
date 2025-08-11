@@ -13,7 +13,7 @@ A CLI tool to download video, audio, and transcriptions from YouTube.
 - Language selection for subtitles
 - Pagination for long lists
 - Detailed logging to output.log for debugging
-- Automatic installation of yt-dlp and ffmpeg
+- Automatic installation of yt-dlp
 - Clean terminal interface with auto-clear on startup
 
 ## Getting Started
@@ -40,7 +40,7 @@ A CLI tool to download video, audio, and transcriptions from YouTube.
 
 If you encounter any issues, check the `output.log` file for detailed error information from yt-dlp.
 
-The application will automatically prompt to install yt-dlp and ffmpeg if they are not found. You can also manually install them:
+The application will automatically prompt to install yt-dlp if it is not found. You can also manually install them:
 
 - yt-dlp: https://github.com/yt-dlp/yt-dlp
-- ffmpeg: https://ffmpeg.org/download.html
+- ffmpeg: https://ffmpeg.org/download.html (Optional - Some features may not work without it)

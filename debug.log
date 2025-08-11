@@ -564,3 +564,236 @@ Language 154: Code=yi, Name=Yi
 Language 155: Code=yo, Name=Yo
 Language 156: Code=zu, Name=Zu
 Language 157: Code=9KYABy_KgEM, Name=9KYABy_KgEM
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+Command executed, err: <nil>
+Output length: 6534
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Available formats for Vspc3ViP2G4:
+ID      EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+-------------------------------------------------------------------------------------------------------------------------------
+sb3     mhtml 48x27        0    |                  mhtml | images                                  storyboard
+sb2     mhtml 80x45        0    |                  mhtml | images                                  storyboard
+sb1     mhtml 160x90       0    |                  mhtml | images                                  storyboard
+sb0     mhtml 320x180      0    |                  mhtml | images
+Parsed 6 formats
+Format 0: ID=249, Quality=48 kbps
+Format 1: ID=250, Quality=48 kbps
+Format 2: ID=251, Quality=48 kbps
+Format 3: ID=140, Quality=44 kbps
+Format 4: ID=233, Quality=Low quality
+Format 5: ID=234, Quality=High quality
+Received AudioFormatMsg, Error: , Formats count: 6
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=6, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: false
+AudioFormatSel is nil
+Calling fetchAudioFormats with URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel is nil
+Fetching formats for URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+Command executed, err: <nil>
+Output length: 2813
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Available formats for Vspc3ViP2G4:
+ID  EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC     ASR MORE INFO
+----------------------------------------------------------------------------------------------------------------------
+sb3 mhtml 48x27        0    |                  mhtml | images                             storyboard
+sb2 mhtml 80x45        0    |                  mhtml | images                             storyboard
+sb1 mhtml 160x90       0    |                  mhtml | images                             storyboard
+sb0 mhtml 320x180      0    |                  mhtml | images                             storyboard
+233 mp4  
+Parsed 2 formats
+Format 0: ID=233, Quality=Low quality
+Format 1: ID=234, Quality=High quality
+Received AudioFormatMsg, Error: , Formats count: 2
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=1, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false, Downloading=false, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=false
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=true, Done=false, Error=false
+Handling audio format selection, IsUrlWritten: true, AudioFormatSel != nil: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true
+DownloadAudioView called, IsUrlWritten: true
+AudioFormatSel: Formats=2, Choice=0, Selected=true, Downloading=false, Done=false, Error=true
+Fetching video formats for URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+Command executed, err: <nil>
+Output length: 6534
+Output (first 1000 chars): [youtube] Extracting URL: https://www.youtube.com/watch?v=Vspc3ViP2G4
+[youtube] Vspc3ViP2G4: Downloading webpage
+[youtube] Vspc3ViP2G4: Downloading tv client config
+[youtube] Vspc3ViP2G4: Downloading tv player API JSON
+[youtube] Vspc3ViP2G4: Downloading ios player API JSON
+[youtube] Vspc3ViP2G4: Downloading m3u8 information
+[info] Available formats for Vspc3ViP2G4:
+ID      EXT   RESOLUTION FPS CH |   FILESIZE   TBR PROTO | VCODEC          VBR ACODEC      ABR ASR MORE INFO
+-------------------------------------------------------------------------------------------------------------------------------
+sb3     mhtml 48x27        0    |                  mhtml | images                                  storyboard
+sb2     mhtml 80x45        0    |                  mhtml | images                                  storyboard
+sb1     mhtml 160x90       0    |                  mhtml | images                                  storyboard
+sb0     mhtml 320x180      0    |                  mhtml | images
+Parsed 43 video formats
+Video Format 0: ID=ID, Quality=Unknown resolution
+Video Format 1: ID=sb3, Quality=48x27
+Video Format 2: ID=sb2, Quality=80x45
+Video Format 3: ID=sb1, Quality=160x90
+Video Format 4: ID=sb0, Quality=320x180
+Video Format 5: ID=602, Quality=256x144
+Video Format 6: ID=269, Quality=256x144
+Video Format 7: ID=160, Quality=256x144
+Video Format 8: ID=603, Quality=256x144
+Video Format 9: ID=278, Quality=256x144
+Video Format 10: ID=394, Quality=256x144
+Video Format 11: ID=229, Quality=426x240
+Video Format 12: ID=133, Quality=426x240
+Video Format 13: ID=604, Quality=426x240
+Video Format 14: ID=242, Quality=426x240
+Video Format 15: ID=395, Quality=426x240
+Video Format 16: ID=230, Quality=640x360
+Video Format 17: ID=134, Quality=360p
+Video Format 18: ID=18, Quality=360p
+Video Format 19: ID=605, Quality=640x360
+Video Format 20: ID=243, Quality=360p
+Video Format 21: ID=396, Quality=360p
+Video Format 22: ID=231, Quality=854x480
+Video Format 23: ID=135, Quality=480p
+Video Format 24: ID=606, Quality=854x480
+Video Format 25: ID=244, Quality=480p
+Video Format 26: ID=397, Quality=480p
+Video Format 27: ID=232, Quality=1280x720
+Video Format 28: ID=136, Quality=720p HD
+Video Format 29: ID=609, Quality=1280x720
+Video Format 30: ID=247, Quality=720p HD
+Video Format 31: ID=398, Quality=720p HD
+Video Format 32: ID=270, Quality=1920x1080
+Video Format 33: ID=137, Quality=1080p Full HD
+Video Format 34: ID=614, Quality=1920x1080
+Video Format 35: ID=248, Quality=1080p Full HD
+Video Format 36: ID=399, Quality=1080p Full HD
+Video Format 37: ID=620, Quality=2560x1440
+Video Format 38: ID=271, Quality=1440p Quad HD
+Video Format 39: ID=400, Quality=1440p Quad HD
+Video Format 40: ID=625, Quality=3840x2160
+Video Format 41: ID=313, Quality=2160p 4K
+Video Format 42: ID=401, Quality=2160p 4K

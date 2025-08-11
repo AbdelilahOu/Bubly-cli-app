@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"os"
 	"runtime"
-	"time"
 
 	"github.com/AbdelilahOu/Bubly-cli-app/types"
 	tea "github.com/charmbracelet/bubbletea"
@@ -35,20 +34,10 @@ func CheckFfmpeg() bool {
 }
 
 func InstallYtdlp() tea.Cmd {
-	progress := 0
-	return tea.Tick(time.Millisecond*50, func(t time.Time) tea.Msg {
-		progress += 1
-		if progress > 100 {
-
-			err := doInstallYtdlp()
-			return types.YtdlpInstalledMsg{Err: err}
-		}
-		return types.ProgressMsg{
-			Progress: progress,
-			Total:    100,
-			Message:  fmt.Sprintf("Installing yt-dlp... %d%%", progress),
-		}
-	})
+	return func() tea.Msg {
+		err := doInstallYtdlp()
+		return types.YtdlpInstalledMsg{Err: err}
+	}
 }
 
 func doInstallYtdlp() error {
@@ -102,72 +91,6 @@ func doInstallYtdlp() error {
 	err = os.Setenv("PATH", "bin;"+path)
 	if err != nil {
 		return err
-	}
-
-	return nil
-}
-
-func InstallFfmpeg() tea.Cmd {
-	progress := 0
-	return tea.Tick(time.Millisecond*50, func(t time.Time) tea.Msg {
-		progress += 1
-		if progress > 100 {
-
-			err := doInstallFfmpeg()
-			return types.FfmpegInstalledMsg{Err: err}
-		}
-		return types.ProgressMsg{
-			Progress: progress,
-			Total:    100,
-			Message:  fmt.Sprintf("Installing ffmpeg... %d%%", progress),
-		}
-	})
-}
-
-func doInstallFfmpeg() error {
-	err := os.MkdirAll("bin", 0755)
-	if err != nil {
-		return err
-	}
-
-	var url string
-	switch runtime.GOOS {
-	case "windows":
-
-		url = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip"
-	case "linux":
-
-		url = "https://johnvansickle.com/ffmpeg/releases/ffmpeg-git-amd64-static.tar.xz"
-	case "darwin":
-
-		url = "https://evermeet.cx/ffmpeg/ffmpeg-5.1.7z"
-	default:
-		return fmt.Errorf("unsupported OS for ffmpeg installation")
-	}
-
-	if runtime.GOOS == "windows" {
-		resp, err := http.Get(url)
-		if err != nil {
-			return err
-		}
-		defer resp.Body.Close()
-
-		destPath := "bin/ffmpeg.exe"
-		out, err := os.Create(destPath)
-		if err != nil {
-			return err
-		}
-		defer out.Close()
-
-		_, err = io.Copy(out, resp.Body)
-		if err != nil {
-			return err
-		}
-
-		err = os.Chmod(destPath, 0755)
-		if err != nil {
-			return err
-		}
 	}
 
 	return nil

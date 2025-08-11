@@ -61,6 +61,9 @@ func (m AppModel) fetchAudioFormats(url string) tea.Cmd {
 
 		if useFfmpeg {
 			args = append(args, "--ffmpeg-location", ffmpegPath)
+		} else {
+			// Add a warning to the log file if ffmpeg is not found
+			fmt.Fprintf(logFile, "Warning: ffmpeg not found. Some features may not work correctly.\n")
 		}
 
 		cmd := exec.Command(path, args...)
@@ -256,6 +259,9 @@ func (m AppModel) downloadAudio(url string, formatID string) tea.Cmd {
 
 		if useFfmpeg {
 			args = append(args, "--ffmpeg-location", ffmpegPath)
+		} else {
+			// Add a warning to the log file if ffmpeg is not found
+			fmt.Fprintf(logFile, "Warning: ffmpeg not found. Some features may not work correctly.\n")
 		}
 
 		args = append(args, "--sleep-requests", "1", "--sleep-interval", "5", "--max-sleep-interval", "10")
